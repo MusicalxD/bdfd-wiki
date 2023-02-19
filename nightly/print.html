@@ -8075,12 +8075,12 @@ $randomText[Hello;Hi;Hey]!
 <div style="break-before: page; page-break-before: always;"></div><h1 id="removecomponent-1"><a class="header" href="#removecomponent-1">$removeComponent</a></h1>
 <p>Removes certain component from a message.</p>
 <h2 id="usage-137"><a class="header" href="#usage-137">Usage</a></h2>
-<pre><code>$removeComponent[customID;(optional) messageID]
+<pre><code>$removeComponent[customID;(messageID)]
 </code></pre>
 <h3 id="parameters-191"><a class="header" href="#parameters-191">Parameters</a></h3>
 <ul>
-<li><code>customID</code> <code>(Type : String || Flag : Required)</code> : The select-menu/button custom ID to remove from the message.</li>
-<li><code>messageID</code> <code>(Type : Snowflake || Flag : Vacantable)</code> : The message to remove the component from, uses the bot's current message if no 'messageID' is provided.</li>
+<li><code>customID</code> <code>(Type: String || Flag: Required)</code>: The select-menu/button custom ID to remove from the message.</li>
+<li><code>messageID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: The message to remove the component from, uses the bot's current message if no 'messageID' is provided.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="removecontains"><a class="header" href="#removecontains">$removeContains</a></h1>
 <p>Removes messages that contains provided words. It will remove <code>amount</code> last messages (replace 'amount' with number) (max 100 messages) </p>
