@@ -7319,11 +7319,11 @@ $modifyChannelPerms[$mentionedChannels[1;yes];+sendmessages;$guildID]
 </blockquote>
 <h3 id="parameters-155"><a class="header" href="#parameters-155">Parameters</a></h3>
 <ul>
-<li><code>roleID</code> <code>(Type : Snowflake || Flag : Required)</code> : The ID of the role to modify.</li>
-<li><code>roleName</code> <code>(Type : String || Flag : Optional)</code> : The new role name.</li>
-<li><code>colorHex</code> <code>(Type : Color || Flag : Optional)</code> : The new role color.</li>
-<li><code>hoisted</code> <code>(Type : Bool || Flag : Optional)</code> : Whether the role should be displayed separately or not.</li>
-<li><code>mentionable</code> <code>(Type : Bool || Flag : Optional)</code> : Whether the role should be mentionable by everyone or not.</li>
+<li><code>roleID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the role to modify.</li>
+<li><code>roleName</code> <code>(Type: String || Flag: Optional)</code>: New role name.</li>
+<li><code>colorHex</code> <code>(Type: Color || Flag: Optional)</code>: New role color.</li>
+<li><code>hoisted</code> <code>(Type: Bool || Flag: Optional)</code>: Whether the role should be displayed separately or not.</li>
+<li><code>mentionable</code> <code>(Type: Bool || Flag: Optional)</code>: Whether the role should be mentionable by everyone or not.</li>
 </ul>
 <h2 id="example-191"><a class="header" href="#example-191">Example</a></h2>
 <pre><code>$nomention
@@ -7336,12 +7336,12 @@ $description[✅ Changed role name of &lt;@&amp;$findRole[$message[1]]&gt;]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="modifyroleperms"><a class="header" href="#modifyroleperms">$modifyRolePerms</a></h1>
 <p>Modifies a role's permissions.</p>
 <h2 id="usage-105"><a class="header" href="#usage-105">Usage</a></h2>
-<pre><code>$modifyRolePerms[roleID;permissions]
+<pre><code>$modifyRolePerms[roleID;permissions;...]
 </code></pre>
 <h3 id="parameters-156"><a class="header" href="#parameters-156">Parameters</a></h3>
 <ul>
-<li><code>roleID</code> <code>(Type : Snowflake || Flag : Required)</code> : The role to modify the permissions for. Use <code>$guildID</code> for the <em>@everyone</em> role.</li>
-<li><code>permissions</code> <code>(Type : Permission || Flag : Required)</code> : The <a href="bdscript/../resources/permissions.html">permissions</a> to toggle, separate permissions using <code>;</code>.</li>
+<li><code>roleID</code> <code>(Type: Snowflake || Flag: Required)</code>: The role to modify the permissions for. Use <code>$guildID</code> for the <em>@everyone</em> role.</li>
+<li><code>permissions</code> <code>(Type: Permission || Flag: Required)</code>: The <a href="bdscript/../resources/permissions.html">permissions</a> to toggle, separate permissions using <code>;</code>.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="modulo"><a class="header" href="#modulo">$modulo</a></h1>
 <p>Returns remainder between numbers.</p>
@@ -7350,7 +7350,8 @@ $description[✅ Changed role name of &lt;@&amp;$findRole[$message[1]]&gt;]
 </code></pre>
 <h3 id="parameters-157"><a class="header" href="#parameters-157">Parameters</a></h3>
 <ul>
-<li><code>A,B</code> <code>(Type : Integer || Flag : Required)</code> : The numbers to return the remainder for. Separate numbers using <code>;</code>.</li>
+<li><code>A</code> <code>(Type: Integer || Flag: Required)</code>: The dividend.</li>
+<li><code>B</code> <code>(Type: Integer || Flag: Required)</code>: The divisor.</li>
 </ul>
 <h2 id="example-192"><a class="header" href="#example-192">Example</a></h2>
 <pre><code>$nomention
@@ -7378,7 +7379,7 @@ Current Month: $month
 </code></pre>
 <h3 id="parameters-158"><a class="header" href="#parameters-158">Parameters</a></h3>
 <ul>
-<li><code>number</code> <code>(Type : (Big)Float,Integer || Flag : Required)</code>  The numbers to multiply, separate numbers using <code>;</code>.</li>
+<li><code>number</code> <code>(Type: Float, Integer || Flag: Required)</code>: The numbers to multiply. Separate numbers using <code>;</code>.</li>
 </ul>
 <h2 id="example-194"><a class="header" href="#example-194">Example</a></h2>
 <pre><code>$nomention
@@ -7397,7 +7398,7 @@ $multi[$message[1];$message[2]]
 </code></pre>
 <h3 id="parameters-159"><a class="header" href="#parameters-159">Parameters</a></h3>
 <ul>
-<li><code>mutedRoleName</code> - The name of the 'Muted' role (case sensitive).</li>
+<li><code>mutedRoleName</code> <code>(Type: String || Flag: Required)</code>: The name of the 'Muted' role (case sensitive).</li>
 </ul>
 <h2 id="example-195"><a class="header" href="#example-195">Example</a></h2>
 <pre><code>$nomention
@@ -7409,12 +7410,13 @@ $mute[Muted]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="newmodal"><a class="header" href="#newmodal">$newModal</a></h1>
 <p>Creates a new modal.</p>
 <h2 id="usage-110"><a class="header" href="#usage-110">Usage</a></h2>
-<pre><code>$newModal[Modal ID;Title]
+<pre><code>$newModal[modal ID;title]
+
 </code></pre>
 <h3 id="parameters-160"><a class="header" href="#parameters-160">Parameters</a></h3>
 <ul>
-<li><code>Modal ID</code> <code>(Type : String || Flag : Required)</code> : ID of the <code>$newModal[]</code> which will be used for <code>$onInteraction[]</code> callback.</li>
-<li><code>Title</code> <code>(Type : String || Flag : Required)</code> : title displayed in the modal.</li>
+<li><code>modal ID</code> <code>(Type: String || Flag: Required)</code>: ID of the <code>$newModal[]</code> which is used in <code>$onInteraction[]</code> callback.</li>
+<li><code>title</code> <code>(Type: String || Flag: Required)</code>: Title displayed in the modal.</li>
 </ul>
 <h2 id="example-196"><a class="header" href="#example-196">Example</a></h2>
 <pre><code>$nomention
