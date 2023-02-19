@@ -7290,9 +7290,9 @@ $modifyChannel[$channelID[general];chill-chat;A chill chat!;!unchanged;!unchange
 </code></pre>
 <h3 id="parameters-154"><a class="header" href="#parameters-154">Parameters</a></h3>
 <ul>
-<li><code>channelID</code> <code>(Type : Snowflake || Flag : Required)</code> : The channel to change the permissions for.</li>
-<li><code>permissions</code> <code>(Type : Permission || Flag : Required)</code> : The <a href="bdscript/../resources/permissions.html">permissions</a> to add/remove. <code>+</code> means allow, <code>-</code> means deny, <code>/</code> means neutral permission.</li>
-<li><code>userID/roleID</code> <code>(Type : Snowflake || Flag : Required)</code> : The role or user to modify the permissions for. Use <code>$guildID</code> for <em>@everyone</em>.</li>
+<li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel to change the permissions for.</li>
+<li><code>permissions</code> <code>(Type: Permission || Flag: Required)</code>: The <a href="bdscript/../resources/permissions.html">permissions</a> to add/remove. <code>+</code> means allow, <code>-</code> means deny, <code>/</code> means neutral permission.</li>
+<li><code>userID/roleID</code> <code>(Type: Snowflake || Flag: Required)</code>: The role or user to modify the permissions for. Use <code>$guildID</code> for <em>@everyone</em>.</li>
 </ul>
 <h2 id="example-190"><a class="header" href="#example-190">Example</a></h2>
 <p>Lock:</p>
@@ -7312,7 +7312,7 @@ $modifyChannelPerms[$mentionedChannels[1;yes];+sendmessages;$guildID]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="modifyrole"><a class="header" href="#modifyrole">$modifyRole</a></h1>
 <p>Modifies a role.</p>
 <h2 id="usage-104"><a class="header" href="#usage-104">Usage</a></h2>
-<pre><code>$modifyRole[roleID;(roleName;colorHex;hoisted (yes/no);mentionable (yes/no))]
+<pre><code>$modifyRole[roleID;(roleName;colorHex;hoisted;mentionable)]
 </code></pre>
 <blockquote>
 <p>🧙‍♂️ You can use <code>!unchanged</code> as a argument to leave the setting as-is.</p>
