@@ -166,13 +166,13 @@
                         </nav>
                         <h1 id="serverinfo"><a class="header" href="#serverinfo">$serverInfo</a></h1>
 <p>Allows you to make a 'server info' command without using a bunch of different functions at once. This function returns info about the current server.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <pre><code>$serverInfo[message;(thumbnail)]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>message</code> <code>(Type : String || Flag : Required)</code> : The text that is returned.</li>
-<li><code>thumbnail</code> <code>(Type : Bool || Flag : Optional)</code> : Whether or not to show the server icon as the thumbnail. Default is <code>yes</code>.</li>
+<li><code>message</code> <code>(Type: String || Flag: Required)</code>: The message format. Check below for more information.</li>
+<li><code>thumbnail</code> <code>(Type: Bool || Flag: Optional)</code>: Whether or not to show the server icon as the thumbnail. The default is <code>yes</code>.</li>
 </ul>
 <p>⚠️ You can not include <code>$serverInfo[]</code> in a command with a <code>$description[]</code> (because it makes one automatically).</p>
 <h3 id="subset-functions"><a class="header" href="#subset-functions">Subset-Functions</a></h3>

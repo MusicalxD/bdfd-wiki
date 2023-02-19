@@ -166,24 +166,20 @@
                         </nav>
                         <h1 id="sort"><a class="header" href="#sort">$sort</a></h1>
 <p>Sorts provided numbers. Amount of numbers can be set to -1 if you'd like to return every number</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <pre><code>$sort[numbers;...;direction;return amount;separator]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>numbers</code> <code>(Type : Float,Integer || Flag : Required)</code> : sets numbers separated by <em>;</em> (ex: 1;2;3)</li>
-<li><code>direction</code> <code>(Type : Enum || Flag : Required)</code> : what order will be used (ascending or descending).
+<li><code>numbers</code> <code>(Type: Float, Integer || Flag: Required)</code>: Sorts numbers separated by <em>;</em> (ex: 1;2;3)</li>
+<li><code>direction</code> <code>(Type: Enum || Flag : Required)</code>: The direction in which to sort:
 <ul>
-<li><em><code>asc</code> - ascending</em></li>
-<li><em><code>desc</code> - descending</em></li>
+<li><code>asc</code> - ascending</li>
+<li><code>desc</code> - descending</li>
 </ul>
 </li>
-<li><code>return amount</code> <code>(Type : Integer || Flag : Required)</code> :  how many numbers will be returned.
-<ul>
-<li>Use <code>-1</code> to generate all numbers</li>
-</ul>
-</li>
-<li><code>separator</code> <code>(Type : String || Flag : Required)</code> : the separator between each number.</li>
+<li><code>return amount</code> <code>(Type: Integer || Flag: Required)</code>:  How many numbers will be returned. Use <code>-1</code> to generate all numbers</li>
+<li><code>separator</code> <code>(Type: String || Flag: Required)</code>: The separator between each number.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention

@@ -165,28 +165,31 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="slashid"><a class="header" href="#slashid">$slashID</a></h1>
-<p>Returns ID of provided slash command.</p>
-<h2 id="usage-1"><a class="header" href="#usage-1">Usage #1</a></h2>
+<p>Returns ID of a slash command.</p>
+<h2 id="usages"><a class="header" href="#usages">Usages</a></h2>
+<p>There are two usages of this function:</p>
+<h3 id="usage-1"><a class="header" href="#usage-1">Usage #1</a></h3>
+<h4 id="syntax"><a class="header" href="#syntax">Syntax</a></h4>
 <pre><code>$slashID
 </code></pre>
-<h2 id="usage-2"><a class="header" href="#usage-2">Usage #2</a></h2>
-<pre><code>$slashID[Slash command name]
-</code></pre>
-<h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
-<ul>
-<li><code>Slash command name </code> <code>(Type : String || Flag : Required)</code></li>
-</ul>
-<h3 id="examples"><a class="header" href="#examples">Examples</a></h3>
-<h4 id="without-an-argument"><a class="header" href="#without-an-argument">Without an argument</a></h4>
-<p>Without an argument, returns the ID of the slash command you just executed.
-Can only be used inside a slash command, otherwise an error will be returned.</p>
-<pre><code>ID of this slash command: $slashID
+<p>Returns ID of the executed slash command.</p>
+<h4 id="example"><a class="header" href="#example">Example</a></h4>
+<pre><code>$nomention
+ID of this slash command: $slashID
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/70456337/191593122-4fd47d30-f108-4b4a-b44b-b1f3b5df9980.png" alt="Without" /></p>
-<h4 id="with-an-argument"><a class="header" href="#with-an-argument">With an argument</a></h4>
-<p>Instead of <code>Slash command name</code> you must provide a valid slash command name.
-The bot can only find its own global slash commands.</p>
-<pre><code>ID of `$message` slash command: $slashID[$message]
+<h3 id="usage-2"><a class="header" href="#usage-2">Usage #2</a></h3>
+<h4 id="syntax-1"><a class="header" href="#syntax-1">Syntax</a></h4>
+<pre><code>$slashID[Slash command name]
+</code></pre>
+<p>Returns ID of the provided slash command.</p>
+<h5 id="parameters"><a class="header" href="#parameters">Parameters</a></h5>
+<ul>
+<li><code>Slash command name</code> <code>(Type: String || Flag: Required)</code>: Name of the global slash command.</li>
+</ul>
+<h4 id="example-1"><a class="header" href="#example-1">Example</a></h4>
+<pre><code>$nomention
+ID of `$message` slash command: $slashID[$message]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/70456337/191593196-6ec89d57-a84c-47d8-b982-63aa3471b40d.png" alt="With" /></p>
 

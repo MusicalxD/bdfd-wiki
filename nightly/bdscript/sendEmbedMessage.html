@@ -166,29 +166,29 @@
                         </nav>
                         <h1 id="sendembedmessage"><a class="header" href="#sendembedmessage">$sendEmbedMessage</a></h1>
 <p>Sends embed message to provided channel. Not needed fields can be left empty.</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <pre><code>$sendEmbedMessage[channel ID;content;(title;title URL;description;color;author;author icon;footer;footer icon;thumbnail;image;add timestamp;return ID)]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>channel ID</code> <code>(Type : Snowflake || Flag : Required)</code> : id of the channel where the message will be sent.</li>
-<li><code>content</code> <code>(Type : String || Flag : Emptiable)</code> : text to be sent before embed.</li>
-<li><code>title</code> <code>(Type : String || Flag : Vacantable)</code> text that will be used as the title in the embed.</li>
-<li><code>title URL</code> <code>(Type : URL || Flag : Vacantable)</code> : url that will be applied to the title.</li>
-<li><code>description</code> <code>(Type : String || Flag : Vacantable)</code> : description that will be applied to the embed.</li>
-<li><code>color</code> <code>(Type : Color || Flag : Vacantable)</code> : the <a href="https://htmlcolorcodes.com/color-picker/">color hex</a> to set the embed border color as.</li>
-<li><code>author</code> <code>(Type : String || Flag : Vacantable )</code> : the text that appear at author </li>
-<li><code>author icon</code> <code>(Type : URL || Flag : Vacantable)</code> : the image that appears in the author icon. This must be a valid image URL.</li>
-<li><code>footer</code> <code>(Type : String || Flag : Vacantable)</code> : The text to set the footer as.</li>
-<li><code>footer icon</code> <code>(Type : URL || Flag : Vacantable)</code> : the URL to set the footer icon as. Must be a valid image URL.</li>
-<li><code>thumbnail</code> <code>(Type : URL || Flag : Vacantable)</code> : the image to set as the thumbnail.</li>
-<li><code>image</code> <code>(Type : URL || Flag : Vacantable)</code> : the URL of the image that appears. Must be a valid image URL.</li>
-<li><code>add timestamp</code> <code>(Type : Bool || Flag : Vacantable)</code> : add the time to send (use yes or no).</li>
-<li><code>return ID</code> <code>(Type : Bool || Flag : Vacantable)</code> : output the message ID outside the embed (use yes or no).</li>
+<li><code>channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: ID of the channel where the message will be sent.</li>
+<li><code>content</code> <code>(Type: String || Flag: Emptiable)</code>: Text that is shown above the embed.</li>
+<li><code>title</code> <code>(Type: String || Flag: Vacantable)</code>: Text that will be used as the title in the embed.</li>
+<li><code>title URL</code> <code>(Type: URL || Flag: Vacantable)</code>: URL that will be applied to the title.</li>
+<li><code>description</code> <code>(Type: String || Flag: Vacantable)</code>: Description that will be applied to the embed.</li>
+<li><code>color</code> <code>(Type: Color || Flag: Vacantable)</code>: The <a href="https://htmlcolorcodes.com/color-picker/">color hex</a> or integer to set the embed border color as.</li>
+<li><code>author</code> <code>(Type: String || Flag: Vacantable )</code>: The text that appear at author.</li>
+<li><code>author icon</code> <code>(Type: URL || Flag: Vacantable)</code>: The image that appears next to author. This must be a valid image URL.</li>
+<li><code>footer</code> <code>(Type: String || Flag: Vacantable)</code>: The text to set the footer as.</li>
+<li><code>footer icon</code> <code>(Type: URL || Flag: Vacantable)</code>: The image that appears next to footer. Must be a valid image URL.</li>
+<li><code>thumbnail</code> <code>(Type: URL || Flag: Vacantable)</code>: The image to set as the thumbnail.</li>
+<li><code>image</code> <code>(Type: URL || Flag: Vacantable)</code>: The image that appears above footer. Must be a valid image URL.</li>
+<li><code>add timestamp</code> <code>(Type: Bool || Flag: Vacantable)</code>: Adds time in footer (use yes or no).</li>
+<li><code>return ID</code> <code>(Type: Bool || Flag: Vacantable)</code>: Outputs the message ID outside the embed (use yes or no).</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
-$sendEmbedMessage[$channelID;;Title;https://discord.gg/;description;000000;author;$authorAvatar;footer;$authorAvatar;$authorAvatar;$authorAvatar;no;no]
+$sendEmbedMessage[$channelID;;Title;https://discord.com/;description;000000;author;$authorAvatar;footer;$authorAvatar;$authorAvatar;$authorAvatar;no;no]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/42785890/151873621-10b17532-93ee-421c-8eea-515f40f1a124.png" alt="image" /></p>
 
