@@ -7110,7 +7110,7 @@ $username[$mentioned[1;yes]]'s lowest role: $roleName[$lowestRole[$mentioned[1;y
 </code></pre>
 <h3 id="parameters-146"><a class="header" href="#parameters-146">Parameters</a></h3>
 <ul>
-<li><code>permissions</code> <code>(Type : Permission || Flag : Required)</code> : The permissions that the role needs to have.  <a href="bdscript//src/resources/permissions.html">(see permissions list)</a>. Use <code>;</code> as separator for multiple permissions</li>
+<li><code>permissions</code> <code>(Type: Permission || Flag: Required)</code>: The permissions that the role needs to have. <a href="bdscript//src/resources/permissions.html">(see permissions list)</a>. Use <code>;</code> as a separator for multiple permissions</li>
 </ul>
 <h2 id="example-181"><a class="header" href="#example-181">Example</a></h2>
 <pre><code>$nomention
@@ -7124,7 +7124,7 @@ Lowest Role with Administrator:  $roleName[$lowestRoleWithPerms[admin]] ($lowest
 </code></pre>
 <h3 id="parameters-147"><a class="header" href="#parameters-147">Parameters</a></h3>
 <ul>
-<li><code>A,B,...</code> <code>(Type : Integer || Flag : Required)</code> : The numbers to get the data from. Separate numbers using <code>;</code>.</li>
+<li><code>A,B,...</code> <code>(Type: Integer || Flag: Required)</code>: The numbers to get the maximum from. Separate numbers using <code>;</code>.</li>
 </ul>
 <h2 id="example-182"><a class="header" href="#example-182">Example</a></h2>
 <pre><code>$nomention
@@ -7152,12 +7152,12 @@ you amount of online members.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="mentioned"><a class="header" href="#mentioned">$mentioned</a></h1>
 <p>Returns the ID of the mentioned user.</p>
 <h2 id="usage-97"><a class="header" href="#usage-97">Usage</a></h2>
-<pre><code>$mentioned[mentionNumber;(returnAuthor(yes/no))]
+<pre><code>$mentioned[mentionNumber;(returnAuthor)]
 </code></pre>
 <h3 id="parameters-148"><a class="header" href="#parameters-148">Parameters</a></h3>
 <ul>
-<li><code>mentionNumber</code> <code>(Type : HowMany || Flag : Required)</code> : The user-mention to get from the author's message  (<code>1</code> = first user-mention, <code>2</code> = second, etc).</li>
-<li><code>returnAuthor</code> <code>(Type : Bool || Flag : Optional)</code> : Whether to return the author's ID if no user is mentioned or not.</li>
+<li><code>mentionNumber</code> <code>(Type: HowMany || Flag: Required)</code>: The user-mention to get from the author's message  (<code>1</code> = first user-mention, <code>2</code> = second, etc).</li>
+<li><code>returnAuthor</code> <code>(Type: Bool || Flag: Optional)</code>: Whether to return the author's ID if no user is mentioned or not.</li>
 </ul>
 <h2 id="example-183"><a class="header" href="#example-183">Example</a></h2>
 <pre><code>$nomention
@@ -7167,7 +7167,7 @@ $mentioned[1]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="mentionedchannels"><a class="header" href="#mentionedchannels">$mentionedChannels</a></h1>
 <p>Returns the ID of the mentioned channel.</p>
 <h2 id="usage-98"><a class="header" href="#usage-98">Usage</a></h2>
-<pre><code>$mentionedChannels[mentionNumber;(returnCurrent(yes/no))]
+<pre><code>$mentionedChannels[mentionNumber;(returnCurrent)]
 </code></pre>
 <h3 id="parameters-149"><a class="header" href="#parameters-149">Parameters</a></h3>
 <ul>
