@@ -6755,7 +6755,7 @@ You are in $hypesquad[$authorID] house.
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ignorechannels"><a class="header" href="#ignorechannels">$ignoreChannels</a></h1>
 <p>The command can't be executed in any of the provided channels. If the channel is ignored, then the 'errorMessage' is returned.</p>
 <h2 id="usage-78"><a class="header" href="#usage-78">Usage</a></h2>
-<pre><code>$ignoreChannels[channelIDs;errorMessage]
+<pre><code>$ignoreChannels[channelIDs;...;errorMessage]
 </code></pre>
 <h3 id="parameters-127"><a class="header" href="#parameters-127">Parameters</a></h3>
 <ul>
@@ -6783,8 +6783,8 @@ https://media.discordapp.net/attachments/1011682358031826994/1027580044928888832
 </code></pre>
 <h3 id="parameters-128"><a class="header" href="#parameters-128">Parameters</a></h3>
 <ul>
-<li><code>image url</code> <code>(Type : URL || Flag : Emptiable)</code> : The URL of the image that appears. Must be a valid image URL.</li>
-<li><code>index</code> <code>(Type : Integer || Flag : Optional)</code> : What embed the image should belong to. Default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
+<li><code>image url</code> <code>(Type: URL || Flag: Emptiable)</code>: The URL of the image that appears. Must be a valid image URL.</li>
+<li><code>index</code> <code>(Type: Integer || Flag: Optional)</code>: What embed the image should belong to. The default is <code>1</code>. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
 </ul>
 <h2 id="example-164"><a class="header" href="#example-164">Example</a></h2>
 <pre><code>$nomention
