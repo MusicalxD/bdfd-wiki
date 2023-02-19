@@ -8085,12 +8085,12 @@ $randomText[Hello;Hi;Hey]!
 <div style="break-before: page; page-break-before: always;"></div><h1 id="removecontains"><a class="header" href="#removecontains">$removeContains</a></h1>
 <p>Removes messages that contains provided words. Removes up to the given <code>amount</code> of latest messages (max 100) </p>
 <h2 id="usage-138"><a class="header" href="#usage-138">Usage</a></h2>
-<pre><code>$removeContains[word;...;Amount]
+<pre><code>$removeContains[word;...;amount]
 </code></pre>
 <h3 id="parameters-192"><a class="header" href="#parameters-192">Parameters</a></h3>
 <ul>
-<li><code>word</code> <code>(Type : String || Flag : Emptiable)</code> : The phrases/words to delete, separate phrases using <code>;</code>.</li>
-<li><code>Amount</code> <code>(Type : Integer || Flag : Required)</code> : How many messages containing the provided phrases to delete. Max is 100.</li>
+<li><code>word</code> <code>(Type: String || Flag: Emptiable)</code>: The phrases/words to delete, separate phrases using <code>;</code>.</li>
+<li><code>amount</code> <code>(Type: Integer || Flag: Required)</code>: The number of messages containing given words to delete. Max is 100.</li>
 </ul>
 <h2 id="example-228"><a class="header" href="#example-228">Example</a></h2>
 <pre><code>$nomention
@@ -8125,13 +8125,13 @@ $removeLinks[$noMentionMessage]
 </code></pre>
 <h3 id="parameters-193"><a class="header" href="#parameters-193">Parameters</a></h3>
 <ul>
-<li><code>index</code> <code>(Type : Integer || Flag : Required)</code> : The index of the <code>$textSplit</code> value to remove.</li>
+<li><code>index</code> <code>(Type: Integer || Flag: Required)</code>: The index of the <code>$textSplit</code> value to remove.</li>
 </ul>
 <p><a href="bdscript/../guides/textSplitting.html"><em>See more in the Text Splitting guide...</em></a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="repeatmessage"><a class="header" href="#repeatmessage">$repeatMessage</a></h1>
 <p>Repeats the provided text a certain amount of times.</p>
 <h2 id="usage-140"><a class="header" href="#usage-140">Usage</a></h2>
-<pre><code>$repeatMessage[Amount;Message]
+<pre><code>$repeatMessage[amount;message]
 </code></pre>
 <h3 id="parameters-194"><a class="header" href="#parameters-194">Parameters</a></h3>
 <ul>
