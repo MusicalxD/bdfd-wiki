@@ -8159,10 +8159,10 @@ $repeatMessage[5;Hello World! ]
 </code></pre>
 <h3 id="parameters-195"><a class="header" href="#parameters-195">Parameters</a></h3>
 <ul>
-<li><code>text</code> <code>(Type : String || Flag : Emptiable)</code> : The text where the bot is searching for the 'sample'.</li>
-<li><code>sample</code> <code>(Type : String || Flag : Emptiable)</code> : The text to replace with 'new'.</li>
-<li><code>new</code> <code>(Type : String || Flag : Emptiable)</code> : The text to replace 'sample' with.</li>
-<li><code>how many</code> <code>(Type : Integer || Flag : Optional)</code> : How many times the bot should replace the sample <em>(if there is multiple arguments in 'text' that match 'sample')</em>.  Use <code>-1</code> to replace all 'sample' in 'text' with 'new'.</li>
+<li><code>text</code> <code>(Type: String || Flag: Emptiable)</code>: The text where the bot is searching for the 'sample'.</li>
+<li><code>sample</code> <code>(Type: String || Flag: Emptiable)</code>: The text to replace with 'new'.</li>
+<li><code>new</code> <code>(Type: String || Flag: Emptiable)</code>: The text to replace 'sample' with.</li>
+<li><code>howMany</code> <code>(Type: Integer || Flag: Optional)</code>: The number of times, at most, the bot should replace the sample.  Use <code>-1</code> to replace all 'sample' in 'text' with 'new'.</li>
 </ul>
 <h2 id="examples-7"><a class="header" href="#examples-7">Examples</a></h2>
 <p><strong>Example #1:</strong></p>
@@ -8253,7 +8253,7 @@ Replied!
 </blockquote>
 <h3 id="parameters-198"><a class="header" href="#parameters-198">Parameters</a></h3>
 <ul>
-<li><code>delay</code> <code>(Type : Duration || Flag : Required)</code> : How long the command is delayed (e.g: 10s, 10m, 40m).</li>
+<li><code>delay</code> <code>(Type: Duration || Flag: Required)</code>: How long the command is delayed for (e.g: 10s, 10m, 40m).</li>
 </ul>
 <h2 id="example-234"><a class="header" href="#example-234">Example</a></h2>
 <pre><code>$replyIn[5s]
@@ -8266,7 +8266,7 @@ Hi $username!
 </code></pre>
 <h3 id="parameters-199"><a class="header" href="#parameters-199">Parameters</a></h3>
 <ul>
-<li><code>Variable Name</code> <code>(Type : String || Flag : Required)</code> : The name of the variable to reset.</li>
+<li><code>Variable Name</code> <code>(Type: String || Flag: Required)</code>: The name of the variable to reset.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="resetservervar"><a class="header" href="#resetservervar">$resetServerVar</a></h1>
 <p>Resets a server variable back to it's default value <em>(the one inputted in the app)</em> <strong>for every server</strong>.</p>
