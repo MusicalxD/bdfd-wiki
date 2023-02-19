@@ -7586,8 +7586,8 @@ $description[Hey! I have `embed links` permission in current channel.]
 </code></pre>
 <h3 id="parameters-168"><a class="header" href="#parameters-168">Parameters</a></h3>
 <ul>
-<li><code>permissions</code> <code>(Type : Permission || Flag : Emptiable)</code> : The <a href="bdscript/../resources/permissions.html">permissions</a> that the bot needs to run the command. Use <code>;</code> as separator for multiple permissions.</li>
-<li><code>errorMessage</code> <code>(Type : String || Flag : Emptiable)</code> : The message to return when the bot doesn't have all the provided permissions.</li>
+<li><code>permissions</code> <code>(Type: Permission || Flag: Emptiable)</code>: The <a href="bdscript/../resources/permissions.html">permissions</a> that the bot needs to run the command. Use <code>;</code> as a separator for multiple permissions.</li>
+<li><code>errorMessage</code> <code>(Type: String || Flag: Emptiable)</code>: The message to return when the bot doesn't have all the provided permissions.</li>
 </ul>
 <h3 id="example-204"><a class="header" href="#example-204">Example</a></h3>
 <pre><code>$nomention
@@ -7597,12 +7597,12 @@ $description[Hey! I have `embed links` permission.]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onlyforcategories"><a class="header" href="#onlyforcategories">$onlyForCategories</a></h1>
 <p>The command can only be executed in provided categories.</p>
 <h1 id="usage-118"><a class="header" href="#usage-118">Usage</a></h1>
-<pre><code>$onlyForCategories[category IDs;error message]
+<pre><code>$onlyForCategories[category IDs;...;error message]
 </code></pre>
 <h1 id="parameters-169"><a class="header" href="#parameters-169">Parameters</a></h1>
 <ul>
-<li><code>category IDs</code> <code>(Type : Snowflake || Flag : Emptiable)</code> : The categories where the command can be executed in. Separate the categories using <code>;</code>.</li>
-<li><code>error message</code> <code>(Type : String || Flag : Emptiable)</code> : The message that is returned when the command is executed in non-whitelisted categories.</li>
+<li><code>category IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The categories where the command can be executed in. Separate the categories using <code>;</code>.</li>
+<li><code>error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that is returned when the command is executed in non-whitelisted categories.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onlyforchannels"><a class="header" href="#onlyforchannels">$onlyForChannels</a></h1>
 <p>The command can only be executed in the provided channels.</p>
