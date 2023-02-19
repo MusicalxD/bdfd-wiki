@@ -7636,8 +7636,8 @@ $c[This can only be executed in BDScript 2.]
 </code></pre>
 <h3 id="parameters-172"><a class="header" href="#parameters-172">Parameters</a></h3>
 <ul>
-<li><code>roleNames</code> <code>(Type : String || Flag : Emptiable)</code> : The role names to allow.</li>
-<li><code>errorMessage</code> <code>(Type : String || Flag : Emptiable)</code> : The message to return when the user doesn't have the required roles.</li>
+<li><code>roleNames</code> <code>(Type: String || Flag: Emptiable)</code>: The role names to allow.</li>
+<li><code>errorMessage</code> <code>(Type: String || Flag: Emptiable)</code>: The message to return when the user doesn't have the required roles.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onlyforroleids"><a class="header" href="#onlyforroleids">$onlyForRoleIDs</a></h1>
 <p>The command can only executed by the provided roles.</p>
@@ -7652,17 +7652,17 @@ $c[This can only be executed in BDScript 2.]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onlyforservers"><a class="header" href="#onlyforservers">$onlyForServers</a></h1>
 <p>The command can only be executed in the provided servers.</p>
 <h2 id="usage-123"><a class="header" href="#usage-123">Usage</a></h2>
-<pre><code>$onlyForServers[serverIDs;errorMessage]
+<pre><code>$onlyForServers[serverIDs;...;errorMessage]
 </code></pre>
 <h3 id="parameters-174"><a class="header" href="#parameters-174">Parameters</a></h3>
 <ul>
-<li><code>serverIDs</code> <code>(Type : Snowflake || Flag : Emptiable)</code> : The servers that the command can be executed in. Separate the IDs using <code>;</code>.</li>
-<li><code>errorMessage</code> <code>(Type : String || Flag : Emptiable)</code> : The message that is returned when the command is used in a non-whitelisted server.</li>
+<li><code>serverIDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The servers that the command can be executed in. Separate the IDs using <code>;</code>.</li>
+<li><code>errorMessage</code> <code>(Type: String || Flag: Emptiable)</code>: The message that is returned when the command is used in a non-whitelisted server.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onlyforusers"><a class="header" href="#onlyforusers">$onlyForUsers</a></h1>
 <p>The command can only be executed by users with certain 'usernames'.</p>
 <h2 id="usage-124"><a class="header" href="#usage-124">Usage</a></h2>
-<pre><code>$onlyForUsers[usernames;errorMessage]
+<pre><code>$onlyForUsers[usernames;...;errorMessage]
 </code></pre>
 <h3 id="parameters-175"><a class="header" href="#parameters-175">Parameters</a></h3>
 <ul>
