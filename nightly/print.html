@@ -7676,8 +7676,8 @@ $c[This can only be executed in BDScript 2.]
 </code></pre>
 <h3 id="parameters-176"><a class="header" href="#parameters-176">Parameters</a></h3>
 <ul>
-<li><code>condition</code> <code>(Type : String || Flag : Required)</code> : value1!=value2 or value1&gt;value2 or value1&lt;value2.</li>
-<li><code>errorMessage</code> <code>(Type : String || Flag : Emptiable)</code></li>
+<li><code>condition</code> <code>(Type: String || Flag: Required)</code>: The condition to check (e.g. value1!=value2).</li>
+<li><code>errorMessage</code> <code>(Type: String || Flag: Emptiable)</code>: The message to return when the condition isn't true.</li>
 </ul>
 <h3 id="signs-3"><a class="header" href="#signs-3">Signs</a></h3>
 <ul>
@@ -7691,13 +7691,13 @@ $c[This can only be executed in BDScript 2.]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onlyifmessagecontains"><a class="header" href="#onlyifmessagecontains">$onlyIfMessageContains</a></h1>
 <p>The command can only be executed if the 'text' contains all the 'indexes', otherwise the 'errorMessage' is returned.</p>
 <h2 id="usage-126"><a class="header" href="#usage-126">Usage</a></h2>
-<pre><code>$onlyIfMessageContains[text;indexes;errorMessage]
+<pre><code>$onlyIfMessageContains[message;word;...;errorMessage]
 </code></pre>
 <h3 id="parameters-177"><a class="header" href="#parameters-177">Parameters</a></h3>
 <ul>
-<li><code>text</code> <code>(Type : String || Flag : Emptiable)</code> : The text to check.</li>
-<li><code>indexes</code> <code>(Type : String || Flag : Emptiable)</code> : The phrases that the text must contain, separate phrases using <code>;</code>.</li>
-<li><code>errorMessage</code> <code>(Type : String || Flag : Emptiable)</code> : The message that is returned if the text doesn't contain all the provided indexes.</li>
+<li><code>message</code> <code>(Type: String || Flag: Emptiable)</code>: The text to check.</li>
+<li><code>word</code> <code>(Type: String || Flag: Emptiable)</code>: The words that the message must contain. Separate words using <code>;</code>.</li>
+<li><code>errorMessage</code> <code>(Type: String || Flag: Emptiable)</code>: The message that is returned if the text doesn't contain all the provided words.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onlynsfw"><a class="header" href="#onlynsfw">$onlyNSFW</a></h1>
 <p>Only allows the command to be executed in <a href="https://support.discord.com/hc/en-us/articles/115000084051-NSFW-Channels-and-Content">NSFW channels</a>.</p>
@@ -7706,7 +7706,7 @@ $c[This can only be executed in BDScript 2.]
 </code></pre>
 <h3 id="parameters-178"><a class="header" href="#parameters-178">Parameters</a></h3>
 <ul>
-<li><code>errorMessage</code> <code>(Type : String || Flag : Emptiable)</code> : The message that is returned when the command is executed outside of a NSFW channel.</li>
+<li><code>errorMessage</code> <code>(Type: String || Flag: Emptiable)</code>: The message that is returned when the command is executed outside of an NSFW channel.</li>
 </ul>
 <h2 id="example-206"><a class="header" href="#example-206">Example</a></h2>
 <pre><code>$nomention
@@ -7716,7 +7716,7 @@ $c[Put your code here.]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onlyperms"><a class="header" href="#onlyperms">$onlyPerms</a></h1>
 <p>The command can only be executed if the user running the command has all the provided 'permissions'. Otherwise, the 'errorMessage' is returned.</p>
 <h2 id="usage-128"><a class="header" href="#usage-128">Usage</a></h2>
-<pre><code>$onlyPerms[permissions;errorMessage]
+<pre><code>$onlyPerms[permissions;...;errorMessage]
 </code></pre>
 <h3 id="parameters-179"><a class="header" href="#parameters-179">Parameters</a></h3>
 <ul>

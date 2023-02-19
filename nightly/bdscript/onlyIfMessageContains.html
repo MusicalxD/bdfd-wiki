@@ -167,13 +167,13 @@
                         <h1 id="onlyifmessagecontains"><a class="header" href="#onlyifmessagecontains">$onlyIfMessageContains</a></h1>
 <p>The command can only be executed if the 'text' contains all the 'indexes', otherwise the 'errorMessage' is returned.</p>
 <h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$onlyIfMessageContains[text;indexes;errorMessage]
+<pre><code>$onlyIfMessageContains[message;word;...;errorMessage]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>text</code> <code>(Type : String || Flag : Emptiable)</code> : The text to check.</li>
-<li><code>indexes</code> <code>(Type : String || Flag : Emptiable)</code> : The phrases that the text must contain, separate phrases using <code>;</code>.</li>
-<li><code>errorMessage</code> <code>(Type : String || Flag : Emptiable)</code> : The message that is returned if the text doesn't contain all the provided indexes.</li>
+<li><code>message</code> <code>(Type: String || Flag: Emptiable)</code>: The text to check.</li>
+<li><code>word</code> <code>(Type: String || Flag: Emptiable)</code>: The words that the message must contain. Separate words using <code>;</code>.</li>
+<li><code>errorMessage</code> <code>(Type: String || Flag: Emptiable)</code>: The message that is returned if the text doesn't contain all the provided words.</li>
 </ul>
 
                     </main>
