@@ -7432,15 +7432,16 @@ $addTextInput[modalInput3;paragraph;Can you tell us about yourself?;5;1000;no;;I
 <div style="break-before: page; page-break-before: always;"></div><h1 id="newselectmenu"><a class="header" href="#newselectmenu">$newSelectMenu</a></h1>
 <p>Add select menu to a message.</p>
 <h2 id="usage-111"><a class="header" href="#usage-111">Usage</a></h2>
-<pre><code>$newSelectMenu[Menu ID;Min;Max;(Placeholder;Message ID)]
+<pre><code>$newSelectMenu[menu ID;min;max;(placeholder;message ID)]
+
 </code></pre>
 <h2 id="parameters-161"><a class="header" href="#parameters-161">Parameters</a></h2>
 <ul>
-<li><code>Menu ID</code> <code>(Type : String || Flag : Required)</code> : menu ID which will be used ine the <code>$onInteraction[]</code> callback and inside the first argument of <code>$addSelectMenuOption[]</code></li>
-<li><code>Min</code> <code>(Type : Integer || Flag : Required)</code> : minimum amount of values that can be selected.</li>
-<li><code>Max</code> <code>(Type : Integer || Flag : Required)</code> : maximum amount of values that can be selected.</li>
-<li><code>Placeholder</code> <code>(Type : String || Flag : Vacantable)</code> : it's a text that appears if no option is selected.</li>
-<li><code>Message ID</code> <code>(Type : Snowflake || Flag : Vacantable)</code> : ID of a message that should have select menu added to it. By default it's the bot's response. </li>
+<li><code>menu ID</code> <code>(Type: String || Flag: Required)</code>: Menu ID which is used in the <code>$onInteraction[]</code> callback and inside the first argument of <code>$addSelectMenuOption[]</code></li>
+<li><code>min</code> <code>(Type: Integer || Flag: Required)</code>: The minimum amount of values that can be selected.</li>
+<li><code>max</code> <code>(Type: Integer || Flag: Required)</code>: The maximum amount of values that can be selected.</li>
+<li><code>placeholder</code> <code>(Type: String || Flag: Vacantable)</code>: It's a text that appears if no option is selected.</li>
+<li><code>message ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: ID of a message that should have a select menu added to it. By default, it's the bot's response.</li>
 </ul>
 <h2 id="example-197"><a class="header" href="#example-197">Example</a></h2>
 <pre><code>$newSelectMenu[Example;1;1;Choose some option]
