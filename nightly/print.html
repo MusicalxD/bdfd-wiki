@@ -7437,11 +7437,11 @@ $addTextInput[modalInput3;paragraph;Can you tell us about yourself?;5;1000;no;;I
 </code></pre>
 <h2 id="parameters-161"><a class="header" href="#parameters-161">Parameters</a></h2>
 <ul>
-<li><code>Menu ID</code> <code>(Type : String || Flag : Required)</code> : menu ID which will be used ine the <code>$onInteraction[]</code> callback and inside the first argument of <code>$addSelectMenuOption[]</code></li>
-<li><code>Min</code> <code>(Type : Integer || Flag : Required)</code> : minimum amount of values that can be selected.</li>
-<li><code>Max</code> <code>(Type : Integer || Flag : Required)</code> : maximum amount of values that can be selected.</li>
-<li><code>Placeholder</code> <code>(Type : String || Flag : Vacantable)</code> : it's a text that appears if no option is selected.</li>
-<li><code>Message ID</code> <code>(Type : Snowflake || Flag : Vacantable)</code> : ID of a message that should have select menu added to it. By default it's the bot's response. </li>
+<li><code>menu ID</code> <code>(Type: String || Flag: Required)</code>: Menu ID which is used in the <code>$onInteraction[]</code> callback and inside the first argument of <code>$addSelectMenuOption[]</code></li>
+<li><code>min</code> <code>(Type: Integer || Flag: Required)</code>: The minimum amount of values that can be selected.</li>
+<li><code>max</code> <code>(Type: Integer || Flag: Required)</code>: The maximum amount of values that can be selected.</li>
+<li><code>placeholder</code> <code>(Type: String || Flag: Vacantable)</code>: It's a text that appears if no option is selected.</li>
+<li><code>message ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: ID of a message that should have a select menu added to it. By default, it's the bot's response.</li>
 </ul>
 <h2 id="example-197"><a class="header" href="#example-197">Example</a></h2>
 <pre><code>$newSelectMenu[Example;1;1;Choose some option]
@@ -7455,23 +7455,23 @@ $addSelectMenuOption[Example;Third;third-option;The third option]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="newticket"><a class="header" href="#newticket">$newTicket</a></h1>
 <p>Creates a new ticket.</p>
 <h2 id="usage-112"><a class="header" href="#usage-112">Usage</a></h2>
-<pre><code>$newTicket[categoryID/name;No question message;In ticket message;Message to user;Error message;(Ticket number;(yes/no) return id of the ticket message)]
+<pre><code>$newTicket[categoryID/name;No question message;In ticket message;Message to user;Error message;(Ticket number;return id of the ticket message)]
 </code></pre>
 <h3 id="parameters-162"><a class="header" href="#parameters-162">Parameters</a></h3>
 <ul>
-<li><code>categoryID/name</code> <code>(Type : String || Flag : Emptiable)</code> : The category to put the ticket channels in. Can be a category ID or name.</li>
+<li><code>categoryID/name</code> <code>(Type: String || Flag: Emptiable)</code>: The category to put the ticket channels in. Can be a category ID or name.</li>
 </ul>
 <blockquote>
 <p>🧙‍♂️ Setup the ticket category permissions:
 <img src="https://user-images.githubusercontent.com/69215413/123529975-b515be80-d6c3-11eb-8f2a-28c629533e52.png" alt="tickets" /></p>
 </blockquote>
 <ul>
-<li><code>No question message</code> <code>(Type : String || Flag : Emptiable)</code> : The message that appears in <code>{subject}</code> when the user doesn't provide a subject.</li>
-<li><code>In ticket message</code> <code>(Type : String || Flag : Emptiable)</code> : The message that is sent in the new ticket channel.</li>
-<li><code>message to user</code> <code>(Type : String || Flag : Emptiable)</code> : The message that gets sent in the current channel.</li>
-<li><code>Error message</code> <code>(Type : String || Flag : Emptiable)</code> : The message that gets returned when the ticket can't be created.</li>
-<li><code>Ticket number</code> <code>(Type : Integer || Flag : Optional)</code> : For custom ticket number.</li>
-<li><code>return id of the ticket message</code> <code>(Type : Bool || Flag : Optional)</code> : (yes/no) Whether you want the ticket message to return it's id.</li>
+<li><code>No question message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that appears in <code>{subject}</code> when the user doesn't provide a subject.</li>
+<li><code>In ticket message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that is sent in the new ticket channel.</li>
+<li><code>message to user</code> <code>(Type: String || Flag: Emptiable)</code>: The message that gets sent in the current channel.</li>
+<li><code>Error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that gets returned when the ticket can't be created.</li>
+<li><code>Ticket number</code> <code>(Type: Integer || Flag: Optional)</code>: For custom ticket number.</li>
+<li><code>return id of the ticket message</code> <code>(Type: Bool || Flag: Optional)</code>: Whether you want the ticket message to return its id.</li>
 </ul>
 <h3 id="subset-functions"><a class="header" href="#subset-functions">Subset Functions</a></h3>
 <p>You can use these subset functions in <code>$newTicket</code>.</p>
@@ -7501,7 +7501,7 @@ User: &lt;@$authorID&gt;;Created ticket! {channel};Failed to make ticket!]
 </code></pre>
 <h4 id="parameters-163"><a class="header" href="#parameters-163">Parameters</a></h4>
 <ul>
-<li><code>userID</code> <code>(Type : Snowflake || Flag : Required)</code> : Returns the provided user's display name.</li>
+<li><code>userID</code> <code>(Type: Snowflake || Flag: Required)</code>: Returns the provided user's display name.</li>
 </ul>
 <h2 id="example-199"><a class="header" href="#example-199">Example</a></h2>
 <pre><code>$nomention
