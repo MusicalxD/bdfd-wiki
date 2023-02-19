@@ -7868,8 +7868,8 @@ My premium expires in: $premiumExpireTime (UNIX Timestamp : $premiumExpireTime[y
 </code></pre>
 <h3 id="parameters-184"><a class="header" href="#parameters-184">Parameters</a></h3>
 <ul>
-<li><code>Channel ID</code> <code>(Type : Snowflake || Flag : Required)</code> : The ID of the channel where the message is.</li>
-<li><code>Message ID</code> <code>(Type : Snowflake || Flag : Required)</code> : The ID of the message which will be published.</li>
+<li><code>channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel where the message is.</li>
+<li><code>message ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The message which will be published.</li>
 </ul>
 <h2 id="example-214"><a class="header" href="#example-214">Example</a></h2>
 <pre><code>$nomention
@@ -7890,8 +7890,11 @@ Message has been published!
 <pre><code>$random[minimum;maximum]
 </code></pre>
 <h4 id="parameters-185"><a class="header" href="#parameters-185">Parameters</a></h4>
-<p><code>minimum &amp; maximum </code> <code>(Type : Integer,Float|| Flag : Required)</code>
-Returns a random number between 'minimum' and 'maximum'.</p>
+<ul>
+<li><code>minimum</code> <code>(Type: Integer, Float || Flag: Required)</code>: The minimum value.</li>
+<li><code>maximum </code> <code>(Type: Integer, Float || Flag: Required)</code>: The maximum value.
+Returns a random number between 'minimum' and 'maximum'.</li>
+</ul>
 <h2 id="example-215"><a class="header" href="#example-215">Example</a></h2>
 <pre><code>$nomention
 🎲 You rolled `$random[1;7]`!
@@ -7970,7 +7973,7 @@ Random Role: $roleName[$randomRoleID[]]
 </code></pre>
 <h3 id="parameters-188"><a class="header" href="#parameters-188">Parameters</a></h3>
 <ul>
-<li><code>length</code> <code>(Type : Integer || Flag : Required)</code> : How long the string should be (max <code>10</code>).</li>
+<li><code>length</code> <code>(Type: Integer || Flag: Required)</code>: How long the string should be (max <code>10</code>).</li>
 </ul>
 <h2 id="example-221"><a class="header" href="#example-221">Example</a></h2>
 <pre><code>$nomention
