@@ -7542,12 +7542,12 @@ $noMentionMessage
 <div style="break-before: page; page-break-before: always;"></div><h1 id="numberseparator"><a class="header" href="#numberseparator">$numberSeparator</a></h1>
 <p>Separates the thousands in a number.</p>
 <h2 id="usage-114"><a class="header" href="#usage-114">Usage</a></h2>
-<pre><code>$numberSeparator[number;(Separator)]
+<pre><code>$numberSeparator[number;(separator)]
 </code></pre>
 <h3 id="parameters-165"><a class="header" href="#parameters-165">Parameters</a></h3>
 <ul>
-<li><code>number</code> <code>(Type : Integer || Flag : Required)</code> : The number to apply the separator to.</li>
-<li><code>Separator</code> <code>(Type : String || Flag : Vacantable)</code> : The separator between each thousand. Default is <code>,</code>.</li>
+<li><code>number</code> <code>(Type: Integer || Flag: Required)</code>: The number to apply the separator to.</li>
+<li><code>separator</code> <code>(Type: String || Flag: Vacantable)</code>: The separator between each thousand. The default is <code>,</code>.</li>
 </ul>
 <h2 id="example-202"><a class="header" href="#example-202">Example</a></h2>
 <pre><code>$nomention
@@ -7561,7 +7561,7 @@ $numberSeparator[5000]
 </code></pre>
 <h3 id="parameters-166"><a class="header" href="#parameters-166">Parameters</a></h3>
 <ul>
-<li><code>errorMessage</code> <code>(Type : String || Flag : Emptiable)</code> : The error message that is returned when the user doesn't have administrator.</li>
+<li><code>errorMessage</code> <code>(Type: String || Flag: Emptiable)</code>: The error message that is returned when the user isn't an administrator.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onlybotchannelperms"><a class="header" href="#onlybotchannelperms">$onlyBotChannelPerms</a></h1>
 <p>The command can only be executed if the bot has all of the provided permissions in a channel.</p>
@@ -7570,9 +7570,9 @@ $numberSeparator[5000]
 </code></pre>
 <h3 id="parameters-167"><a class="header" href="#parameters-167">Parameters</a></h3>
 <ul>
-<li><code>channelID</code> <code>(Type : Snowflake || Flag : Emptiable)</code> : The channel to check the permissions for. Use <code>$channelID</code> for the current channel.</li>
-<li><code>permissions</code> <code>(Type : Permission || Flag : Required)</code> : The <a href="bdscript/../resources/permissions.html">permissions</a> that the bot needs to execute the command. Separate permissions with <code>;</code>.</li>
-<li><code>errorMessage</code> <code>(Type : String || Flag : Emptiable)</code> : The message that is returned when the bot doesn't have the needed permissions.</li>
+<li><code>channelID</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The channel to check the permissions for. Use <code>$channelID</code> for the current channel.</li>
+<li><code>permissions</code> <code>(Type: Permission || Flag: Required)</code>: The <a href="bdscript/../resources/permissions.html">permissions</a> that the bot needs to execute the command. Separate permissions with <code>;</code>.</li>
+<li><code>errorMessage</code> <code>(Type: String || Flag: Emptiable)</code>: The message that is returned when the bot doesn't have the needed permissions.</li>
 </ul>
 <h3 id="example-203"><a class="header" href="#example-203">Example</a></h3>
 <pre><code>$nomention
