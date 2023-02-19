@@ -7607,22 +7607,22 @@ $description[Hey! I have `embed links` permission.]
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onlyforchannels"><a class="header" href="#onlyforchannels">$onlyForChannels</a></h1>
 <p>The command can only be executed in the provided channels.</p>
 <h2 id="usage-119"><a class="header" href="#usage-119">Usage</a></h2>
-<pre><code>$onlyForChannels[channelIDs;errorMessage]
+<pre><code>$onlyForChannels[channelIDs;...;errorMessage]
 </code></pre>
 <h3 id="parameters-170"><a class="header" href="#parameters-170">Parameters</a></h3>
 <ul>
-<li><code>channelIDs</code> <code>(Type : Snowflake || Flag : Emptiable)</code> : The channels that the command can be executed in. Separate the IDs using <code>;</code>.</li>
-<li><code>errorMessage</code> <code>(Type : String || Flag : Emptiable)</code> : The message that is returned when the command is used in a non-whitelisted channel.</li>
+<li><code>channelIDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The channels that the command can be executed in. Separate the IDs using <code>;</code>.</li>
+<li><code>errorMessage</code> <code>(Type: String || Flag: Emptiable)</code>: The message that is returned when the command is used in a non-whitelisted channel.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onlyforids"><a class="header" href="#onlyforids">$onlyForIDs</a></h1>
 <p>The command can only be executed by the provided users.</p>
 <h2 id="usage-120"><a class="header" href="#usage-120">Usage</a></h2>
-<pre><code>$onlyForIDs[userIDs;errorMessage]
+<pre><code>$onlyForIDs[userIDs;...;errorMessage]
 </code></pre>
 <h3 id="parameters-171"><a class="header" href="#parameters-171">Parameters</a></h3>
 <ul>
-<li><code>userIDs</code> <code>(Type : Snowflake || Flag : Emptiable)</code> : The users that can use this command, separate IDs using <code>;</code>.</li>
-<li><code>errorMessage</code> <code>(Type : String || Flag : Emptiable)</code> : The error message that is returned, when the user running the command is not whitelisted.</li>
+<li><code>userIDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The users that can use this command. Separate IDs using <code>;</code>.</li>
+<li><code>errorMessage</code> <code>(Type: String || Flag: Emptiable)</code>: The error message that is returned, when the user running the command is not whitelisted.</li>
 </ul>
 <h2 id="example-205"><a class="header" href="#example-205">Example</a></h2>
 <pre><code>$onlyForIDs[YOUR_ID;❌ You are not my owner!]
@@ -7646,8 +7646,8 @@ $c[This can only be executed in BDScript 2.]
 </code></pre>
 <h3 id="parameters-173"><a class="header" href="#parameters-173">Parameters</a></h3>
 <ul>
-<li><code>roleID</code> <code>(Type : Snowflake || Flag : Emptiable)</code> : The role IDs which are allowed to use the command, separate IDs using <code>;</code>.</li>
-<li><code>errorMessage</code> <code>(Type : String || Flag : Emptiable)</code> : The message to return when the user doesn't have the required roles.</li>
+<li><code>roleID</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The role IDs which are allowed to use the command. Separate IDs using <code>;</code>.</li>
+<li><code>errorMessage</code> <code>(Type: String || Flag: Emptiable)</code>: The message to return when the user doesn't have the required roles.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="onlyforservers"><a class="header" href="#onlyforservers">$onlyForServers</a></h1>
 <p>The command can only be executed in the provided servers.</p>

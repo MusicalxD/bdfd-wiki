@@ -167,12 +167,12 @@
                         <h1 id="onlyforids"><a class="header" href="#onlyforids">$onlyForIDs</a></h1>
 <p>The command can only be executed by the provided users.</p>
 <h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<pre><code>$onlyForIDs[userIDs;errorMessage]
+<pre><code>$onlyForIDs[userIDs;...;errorMessage]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
-<li><code>userIDs</code> <code>(Type : Snowflake || Flag : Emptiable)</code> : The users that can use this command, separate IDs using <code>;</code>.</li>
-<li><code>errorMessage</code> <code>(Type : String || Flag : Emptiable)</code> : The error message that is returned, when the user running the command is not whitelisted.</li>
+<li><code>userIDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The users that can use this command. Separate IDs using <code>;</code>.</li>
+<li><code>errorMessage</code> <code>(Type: String || Flag: Emptiable)</code>: The error message that is returned, when the user running the command is not whitelisted.</li>
 </ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$onlyForIDs[YOUR_ID;❌ You are not my owner!]
