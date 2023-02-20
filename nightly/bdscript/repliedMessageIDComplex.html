@@ -165,16 +165,16 @@
                             <script src="../theme/breadcrumbs.js"></script>
                         </nav>
                         <h1 id="repliedmessageid"><a class="header" href="#repliedmessageid">$repliedMessageID[]</a></h1>
-<h4 id="syntax"><a class="header" href="#syntax">Syntax</a></h4>
+<h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <pre><code>$repliedMessageID[Channel ID;Message ID]
 </code></pre>
 <p>Returns the ID of the replied message form the given message.</p>
-<h4 id="parameters"><a class="header" href="#parameters">Parameters</a></h4>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
 <ul>
 <li><code>Channel ID</code> <code>(Type : Snowflake || Flag : Required)</code> : The channel where the message is located.</li>
 <li><code>Message ID</code> <code>(Type : Snowflake || Flag : Required)</code> : The message from which the ID of the replied message will be taken from.</li>
 </ul>
-<h4 id="example"><a class="header" href="#example">Example</a></h4>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
 The message ID you replied to is: $repliedMessageID[$channelID;$messageID]
 </code></pre>

@@ -8185,53 +8185,53 @@ $repeatMessage[5;Hello World! ]
 <blockquote>
 <p>📌 If the message is not a reply, no response will be returned.</p>
 </blockquote>
-<h4 id="syntax-103"><a class="header" href="#syntax-103">Syntax</a></h4>
+<h2 id="syntax-103"><a class="header" href="#syntax-103">Syntax</a></h2>
 <pre><code>$repliedMessageID
 </code></pre>
 <p>Returns the ID of the replied message from the author's message.</p>
-<h4 id="example-230"><a class="header" href="#example-230">Example</a></h4>
+<h2 id="example-230"><a class="header" href="#example-230">Example</a></h2>
 <pre><code>$nomention
 The message ID you replied to is: $repliedMessageID
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/94063167/198900570-ad5b8a25-56ad-4e66-9c3e-6495406d7fda.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="repliedmessageid-1"><a class="header" href="#repliedmessageid-1">$repliedMessageID[]</a></h1>
-<h4 id="syntax-104"><a class="header" href="#syntax-104">Syntax</a></h4>
+<h2 id="syntax-104"><a class="header" href="#syntax-104">Syntax</a></h2>
 <pre><code>$repliedMessageID[Channel ID;Message ID]
 </code></pre>
 <p>Returns the ID of the replied message form the given message.</p>
-<h4 id="parameters-196"><a class="header" href="#parameters-196">Parameters</a></h4>
+<h3 id="parameters-196"><a class="header" href="#parameters-196">Parameters</a></h3>
 <ul>
 <li><code>Channel ID</code> <code>(Type : Snowflake || Flag : Required)</code> : The channel where the message is located.</li>
 <li><code>Message ID</code> <code>(Type : Snowflake || Flag : Required)</code> : The message from which the ID of the replied message will be taken from.</li>
 </ul>
-<h4 id="example-231"><a class="header" href="#example-231">Example</a></h4>
+<h2 id="example-231"><a class="header" href="#example-231">Example</a></h2>
 <pre><code>$nomention
 The message ID you replied to is: $repliedMessageID[$channelID;$messageID]
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/94063167/198900570-ad5b8a25-56ad-4e66-9c3e-6495406d7fda.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="reply"><a class="header" href="#reply">$reply</a></h1>
 <p>Replies to the user's message.</p>
-<h4 id="syntax-105"><a class="header" href="#syntax-105">Syntax</a></h4>
+<h2 id="syntax-105"><a class="header" href="#syntax-105">Syntax</a></h2>
 <pre><code>$reply
 </code></pre>
 <p>Replies to the author's message.</p>
-<h4 id="example-232"><a class="header" href="#example-232">Example</a></h4>
+<h2 id="example-232"><a class="header" href="#example-232">Example</a></h2>
 <pre><code>$nomention
 $reply
 Hello $username 👋🏻
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/42785890/151721130-51524143-b136-4cfc-b028-694b1d09e84a.png" alt="image" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="reply-1"><a class="header" href="#reply-1">$reply[]</a></h1>
-<h4 id="syntax-106"><a class="header" href="#syntax-106">Syntax</a></h4>
+<h2 id="syntax-106"><a class="header" href="#syntax-106">Syntax</a></h2>
 <pre><code>$reply[Channel ID;Message ID]
 </code></pre>
 <p>Replies to a provided message.</p>
-<h4 id="parameters-197"><a class="header" href="#parameters-197">Parameters</a></h4>
+<h3 id="parameters-197"><a class="header" href="#parameters-197">Parameters</a></h3>
 <ul>
 <li><code>Channel ID</code> <code>(Type : Snowflake || Flag : Required)</code> : The channel where the message is.</li>
 <li><code>Message ID</code> <code>(Type : Snowflake || Flag : Required)</code> : The message to reply.</li>
 </ul>
-<h4 id="example-233"><a class="header" href="#example-233">Example</a></h4>
+<h2 id="example-233"><a class="header" href="#example-233">Example</a></h2>
 <pre><code>$nomention
 $reply[$mentionedChannels[1];$noMentionMessage]
 Replied!
@@ -8811,7 +8811,7 @@ This server's verification level is $serverVerificationLvl
 </blockquote>
 <p><a href="https://nilpointer-software.github.io/bdfd-wiki/guides/variables.html">See more in the Variables guide...</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="shardid"><a class="header" href="#shardid">$shardID</a></h1>
-<h4 id="syntax-130"><a class="header" href="#syntax-130">Syntax</a></h4>
+<h2 id="syntax-130"><a class="header" href="#syntax-130">Syntax</a></h2>
 <pre><code>$shardID
 </code></pre>
 <p>Returns the shard id of the current guild.</p>
@@ -8821,10 +8821,10 @@ $shardID
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/95774950/162153099-4fb1bf14-44de-4f7c-b5d6-604f43ab76aa.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="shardid-1"><a class="header" href="#shardid-1">$shardID[]</a></h1>
-<h4 id="syntax-131"><a class="header" href="#syntax-131">Syntax</a></h4>
+<h2 id="syntax-131"><a class="header" href="#syntax-131">Syntax</a></h2>
 <pre><code>$shardID[guildID]
 </code></pre>
-<h4 id="parameters-224"><a class="header" href="#parameters-224">Parameters</a></h4>
+<h3 id="parameters-224"><a class="header" href="#parameters-224">Parameters</a></h3>
 <ul>
 <li><code>guildID</code> <code>(Type: Snowflake || Flag: Required)</code>: Returns the shard id of the provided guild.</li>
 </ul>
@@ -8839,11 +8839,11 @@ I have $slashCommandsCount slash commands!
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/69215413/126920314-1ad9374e-d19d-43f5-8939-f9abf48a62de.png" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="slashid"><a class="header" href="#slashid">$slashID</a></h1>
-<h4 id="syntax-133"><a class="header" href="#syntax-133">Syntax</a></h4>
+<h2 id="syntax-133"><a class="header" href="#syntax-133">Syntax</a></h2>
 <pre><code>$slashID
 </code></pre>
 <p>Returns ID of the executed slash command.</p>
-<h4 id="example-258"><a class="header" href="#example-258">Example</a></h4>
+<h2 id="example-258"><a class="header" href="#example-258">Example</a></h2>
 <pre><code>$nomention
 ID of this slash command: $slashID
 </code></pre>
