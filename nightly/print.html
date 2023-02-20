@@ -5721,7 +5721,7 @@ Hello $username#$discriminator[]!
 </code></pre>
 <h3 id="parameters-82"><a class="header" href="#parameters-82">Parameters</a></h3>
 <ul>
-<li><code>numbers</code> <code>(Type: Integer,(Big)Float|| Flag: Required)</code>: The numbers to divide. Separate numbers using <code>;</code>.</li>
+<li><code>numbers</code> <code>(Type: Integer, Float || Flag: Required)</code>: The numbers to divide. Separate numbers using <code>;</code>.</li>
 </ul>
 <h2 id="example-121"><a class="header" href="#example-121">Example</a></h2>
 <pre><code>$nomention
@@ -5769,9 +5769,14 @@ Answer: $divide[$message[1];$message[2]]
 </code></pre>
 <h2 id="parameters-84"><a class="header" href="#parameters-84">Parameters</a></h2>
 <ul>
-<li><code>Button ID/URL</code> <code>(Type: String, URL || Flag: Required)</code>: the required button ID or URL, you want to be edited</li>
-<li><code>Label</code> <code>(Type : String || Flag : Emptiable)</code> : new label of displayed on the button </li>
-<li><code>Style</code> <code>(Type: Enum || Flag: Required)</code>: Here, are all possible values for the <code>style</code> argument:
+<li>
+<p><code>Button ID/URL</code> <code>(Type: String, URL || Flag: Required)</code>: the required button ID or URL, you want to be edited</p>
+</li>
+<li>
+<p><code>Label</code> <code>(Type: String || Flag: Emptiable)</code>: new label of displayed on the button </p>
+</li>
+<li>
+<p><code>Style</code> <code>(Type: Enum || Flag: Required)</code>: Here, are all possible values for the <code>style</code> argument:</p>
 <ul>
 <li><code>primary</code></li>
 <li><code>secondary</code></li>
@@ -5780,9 +5785,15 @@ Answer: $divide[$message[1];$message[2]]
 <li><code>link</code></li>
 </ul>
 </li>
-<li><code>Disabled</code> <code>(Type: Bool || Flag: Vacantable)</code>: If set to <code>yes</code> the button can't be pressed. Defaults as <code>no</code></li>
-<li><code>Emoji</code> <code>(Type: Emoji || Flag: Vacantable)</code>: edits / adds an emoji inside the button. Emojis have to be either pasted as <em>Unicode</em> or be in the following format <code>&lt;:emoji name:emoji ID&gt;</code>.</li>
-<li><code>Message ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: Adds a button to the provided message ID. It's important to note that provided message ID author <strong>has to</strong> be the bot.</li>
+<li>
+<p><code>Disabled</code> <code>(Type: Bool || Flag: Vacantable)</code>: If set to <code>yes</code> the button can't be pressed. Defaults as <code>no</code></p>
+</li>
+<li>
+<p><code>Emoji</code> <code>(Type: Emoji || Flag: Vacantable)</code>: edits / adds an emoji inside the button. Emojis have to be either pasted as <em>Unicode</em> or be in the following format <code>&lt;:emoji name:emoji ID&gt;</code>.</p>
+</li>
+<li>
+<p><code>Message ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: Adds a button to the provided message ID. It's important to note that provided message ID author <strong>has to</strong> be the bot.</p>
+</li>
 </ul>
 <h2 id="example-123"><a class="header" href="#example-123">Example</a></h2>
 <h3 id="interaction-command-code"><a class="header" href="#interaction-command-code">Interaction command code</a></h3>
@@ -5915,11 +5926,21 @@ $editMessage[853070225398693898;857040509549281292;This message has been edited!
 </code></pre>
 <h2 id="parameters-89"><a class="header" href="#parameters-89">Parameters</a></h2>
 <ul>
-<li><code>menu ID</code> <code>(Type : String || Flag : Required)</code> : The menu ID you want to edit</li>
-<li><code>min</code> <code>(Type: Integer || Flag: Required)</code>: The minimum amount of values that can be selected.</li>
-<li><code>max</code> <code>(Type: Integer || Flag: Required)</code>: The maximum amount of values that can be selected.</li>
-<li><code>placeholder</code> <code>(Type: String || Flag: Vacantable)</code>: It's a text that appears if no option is selected.</li>
-<li><code>message ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The message for which a select menu will be edited.</li>
+<li>
+<p><code>menu ID</code> <code>(Type: String || Flag: Required)</code>: The menu ID you want to edit</p>
+</li>
+<li>
+<p><code>min</code> <code>(Type: Integer || Flag: Required)</code>: The minimum amount of values that can be selected.</p>
+</li>
+<li>
+<p><code>max</code> <code>(Type: Integer || Flag: Required)</code>: The maximum amount of values that can be selected.</p>
+</li>
+<li>
+<p><code>placeholder</code> <code>(Type: String || Flag: Vacantable)</code>: It's a text that appears if no option is selected.</p>
+</li>
+<li>
+<p><code>message ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The message for which a select menu will be edited.</p>
+</li>
 </ul>
 <h2 id="example-128"><a class="header" href="#example-128">Example</a></h2>
 <h3 id="interaction-code-3"><a class="header" href="#interaction-code-3">Interaction Code</a></h3>
