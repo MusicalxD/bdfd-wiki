@@ -164,38 +164,38 @@
                         <nav class="breadcrumb">
                             <script src="../../theme/breadcrumbs.js"></script>
                         </nav>
-                        <h2 id="argument-flags"><a class="header" href="#argument-flags">Argument Flags</a></h2>
-<p>Function argument flags mark how arguments within a function may be used (or hence, not used at all), it will be displayed near or below the function argument.
-Example: (- <code>userID</code> <code>(Flag: Required)</code>) etc.</p>
-<ul>
-<li><strong>Optional</strong> - The argument <strong>can</strong> be excluded but <strong>cannot</strong> be left empty, they show up as <code>(something)</code> and will <strong>always</strong> be after all required arguments.</li>
-<li><strong>Required</strong> - The argument <strong>must</strong> be included and <strong>cannot</strong> be empty.</li>
-<li><strong>Emptiable</strong> - The argument <strong>must</strong> be included but <strong>can</strong> be empty.</li>
-<li><strong>Vacantable</strong> - The argument <strong>can</strong> be excluded and if included <strong>can</strong> be empty.</li>
-</ul>
-<h2 id="argument-types"><a class="header" href="#argument-types">Argument Types</a></h2>
-<p>This section will explain the various argument types used for function arguments. Function arguments are anything that goes in the brackets <code>[]</code> of a function, it will be displayed near or below the function argument.
-Example: (- <code>userID</code> <code>(Type: Snowflake || Flag: Required)</code>) and if it has more than one option it will be <code>(Type: String, Snowflake || Flag: Required)</code> etc.</p>
-<ul>
-<li><strong>String</strong> - This is the most generalized function, a string can be any character or text.</li>
-<li><strong>Snowflake</strong> - A valid discord ID, can be of a role, channel, user, server, emoji and message.</li>
-<li><strong>Integer</strong> - Any number without decimal (-5, -1, 1, 5 10, etc).</li>
-<li><strong>Float</strong> - A number with decimal (-2.5, -0.5, 1.5, 5.2, 7.30, etc).</li>
-<li><strong>URL</strong> - A valid domain link, <strong>must</strong> be prefixed by <code>http://</code> or <code>https://</code> and have a valid domain name.</li>
-<li><strong>HowMany</strong> - A number that is prefixed or suffixed with &lt; or &gt;, or just a plain integer.</li>
-<li><strong>Enum</strong> - Strings that match a certain key value (case insensitive).</li>
-<li><strong>Emoji</strong> - Emoji as 🌹 or the discord custom emojis in form of <code>&lt;a:emoji_name:emoji-id&gt;</code> for gif emojis and <code>&lt;:emoji_name:emoji-id&gt;</code> for non-gif emojis, for how to get that, check <a href="../../bdscript/addReactions.html">$addReactions</a> as it has explanations for that. Characters <code>&lt;&gt;</code> can be omitted from the discord custom emoji form.</li>
-<li><strong>Duration</strong> - A time based duration, an integer suffixed with a valid time format (s, m, h, d, w).</li>
-<li><strong>Permission</strong> - Discord permission (case insensitive), see <a href="../../resources/permissions.html">this</a> for all valid permissions.</li>
-<li><strong>Bool</strong> - yes/no or true/false.</li>
-<li><strong>Color</strong> - Color Hex Code you can get from <a href="https://htmlcolorcodes.com/color-picker">here</a> as an example</li>
-</ul>
-<h2 id="pairs"><a class="header" href="#pairs">Pairs</a></h2>
-<ul>
-<li><strong>Tuple</strong> - A tuple is a set of arguments that depend on others to function, they are shown with <code>&lt;&gt;</code> on either side.</li>
-<li><strong>Ellipsis</strong> - Ellipsis notations (<code>...</code>) symbolize an argument that can be repeated multiple times. Ellipsis is denoted with <code>...</code> as the argument after the argument which can be repeated.</li>
-</ul>
-
+                        <h1 id="argument-flags"><a class="header" href="#argument-flags">Argument Flags</a></h1>
+<p>Function argument flags indicate how arguments within a function may be used, or if they are optional or required.</p>
+<div class="table-wrapper"><table><thead><tr><th>Flags</th><th>Description</th></tr></thead><tbody>
+<tr><td>Optional</td><td>The argument can be excluded, but cannot be left empty. It is displayed as <code>(something)</code> in usage.</td></tr>
+<tr><td>Required</td><td>The argument must be included and cannot be empty.</td></tr>
+<tr><td>Emptiable</td><td>The argument must be included, but can be empty.</td></tr>
+<tr><td>Vacantable</td><td>The argument can be excluded, and if included, it can be empty.</td></tr>
+</tbody></table>
+</div>
+<h1 id="argument-types"><a class="header" href="#argument-types">Argument Types</a></h1>
+<p>This section explains the various argument types used for function arguments. Arguments are values placed within <code>[]</code> in a function, and they are displayed near or below the function.</p>
+<div class="table-wrapper"><table><thead><tr><th>Types</th><th>Description</th></tr></thead><tbody>
+<tr><td>String</td><td>A general-purpose argument that can contain any characters or text.</td></tr>
+<tr><td>Snowflake</td><td>A valid Discord ID, such as a role, channel, user, server, emoji, or message.</td></tr>
+<tr><td>Integer</td><td>A whole number without a decimal point (e.g., -5, -1, 1, 5, 10, etc.).</td></tr>
+<tr><td>Float</td><td>A number with a decimal point (e.g., -2.5, -0.5, 1.5, 5.2, 7.30, etc.).</td></tr>
+<tr><td>URL</td><td>A valid URL with the prefix <code>http://</code> or <code>https://</code> and a valid domain name.</td></tr>
+<tr><td>HowMany</td><td>A number that can be prefixed or suffixed with <code>&lt;</code> or <code>&gt;</code>, or a plain integer.</td></tr>
+<tr><td>Enum</td><td>Strings that match specific key values (case insensitive).</td></tr>
+<tr><td>Emoji</td><td>An emoji represented as 🌹 or in the format <code>&lt;a:emoji_name:emoji-id&gt;</code> for gif emojis and <code>&lt;:emoji_name:emoji-id&gt;</code> for non-gif emojis.</td></tr>
+<tr><td>Duration</td><td>A time-based duration, represented by an integer followed by a valid time format (s, m, h, d, w).</td></tr>
+<tr><td>Permission</td><td>A Discord permission (case insensitive). See <a href="../../resources/permissions.html">here</a> for valid permissions.</td></tr>
+<tr><td>Bool</td><td>A boolean value represented as yes/no or true/false.</td></tr>
+<tr><td>Color</td><td>A color hex code, which can be obtained from <a href="https://htmlcolorcodes.com/color-picker">here</a>, for example.</td></tr>
+</tbody></table>
+</div>
+<h1 id="argument-pairs"><a class="header" href="#argument-pairs">Argument Pairs</a></h1>
+<div class="table-wrapper"><table><thead><tr><th>Pairs</th><th>Description</th></tr></thead><tbody>
+<tr><td>Tuple</td><td>A set of arguments that depend on each other to function, displayed with <code>&lt;&gt;</code> on either side.</td></tr>
+<tr><td>Ellipsis</td><td>Ellipsis notation (<code>...</code>) represents an argument that can be repeated multiple times.</td></tr>
+</tbody></table>
+</div>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

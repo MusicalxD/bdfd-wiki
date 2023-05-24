@@ -169,14 +169,16 @@
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <pre><code>$authorIcon[image url;(index)]
 </code></pre>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>image url</td><td>The image for the author icon. This must be a valid image URL.</td><td>URL</td><td>Emptiable</td></tr>
+<tr><td>index</td><td>To which embed the author icon will be added. <a href="../resources/embedIndexes.html">(learn more)</a></td><td>Integer</td><td>Optional</td></tr>
+</tbody></table>
+</div>
+<h3 id="note-"><a class="header" href="#note-">Note :</a></h3>
 <blockquote>
 <p><code>$authorIcon[]</code> will not work if there is no text provided in <code>$author[]</code>.</p>
 </blockquote>
-<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
-<ul>
-<li><code>image url</code> <code>(Type: URL || Flag: Emptiable)</code>: The image for the author icon. This must be a valid image URL.</li>
-<li><code>index</code> <code>(Type: Integer || Flag: Optional)</code>: To which embed the author icon will be added. <a href="../resources/embedIndexes.html">(learn more)</a></li>
-</ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
 $authorIcon[$authorAvatar]

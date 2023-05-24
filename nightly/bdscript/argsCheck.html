@@ -170,14 +170,15 @@
 <pre><code>$argsCheck[how many?;error message]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
-<ul>
-<li><code>how many?</code> <code>(Type: HowMany || Flag: Required)</code>: How many arguments there should be in the user’s message.
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>how many?</td><td>How many arguments there should be in the user's message.</td><td>HowMany</td><td>Required</td></tr>
+<tr><td>error message</td><td>The message that the bot will send if the user has too many/little arguments.</td><td>String</td><td>Emptiable</td></tr>
+</tbody></table>
+</div>
+<h3 id="note-"><a class="header" href="#note-">Note :</a></h3>
 <blockquote>
 <p>If you want users to have 3 or more arguments in their message; you can use <code>&gt;3</code>. If you want users to have less than 3 arguments in their message, you can use <code>&lt;3</code>. If you want the users to have exactly 3 arguments in their message put <code>3</code>. </p>
 </blockquote>
-</li>
-<li><code>error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that the bot will send if the user has too many/little arguments.</li>
-</ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
 $argsCheck[&gt;1;❌ Please provide something for me to say!]

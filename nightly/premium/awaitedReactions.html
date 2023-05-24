@@ -179,10 +179,12 @@
 <pre><code>$awaitReactions[&lt;Command name;Reaction&gt;;...]
 </code></pre>
 <h4 id="parameters"><a class="header" href="#parameters">Parameters</a></h4>
-<ul>
-<li><code>Command name</code> <code>(Type: String || Flag: Required)</code>: It's the name which will be used inside the <code>$reaction[]</code> callback.</li>
-<li><code>Reaction</code> <code>(Type: Emoji || Flag: Required)</code>: It awaits the given emoji. Emoji must be either in Unicode or in Discord emoji ID format.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>Command name</td><td>It's the name which will be used inside the <code>$reaction[]</code> callback.</td><td>String</td><td>Required</td></tr>
+<tr><td>Reaction</td><td>It awaits the given emoji. Emoji must be either in Unicode or in Discord emoji ID format.</td><td>Emoji</td><td>Required</td></tr>
+</tbody></table>
+</div>
+<h3 id="note-"><a class="header" href="#note-">Note :</a></h3>
 <blockquote>
 <p>📝 You can group reactions by specifying more <em>&quot;command names&quot;</em> and <em>&quot;reactions&quot;</em> in <code>$awaitReactions[]</code>.<br />
 <br />
@@ -194,9 +196,10 @@
 <pre><code>$reaction[Name]
 </code></pre>
 <h4 id="parameters-1"><a class="header" href="#parameters-1">Parameters</a></h4>
-<ul>
-<li><code>Name</code> <code>(Type: String || Flag: Required)</code>: It's the value which is used in the <em>&quot;command name&quot;</em> argument of <code>$awaitReactions[]</code>.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>Name</td><td>It's the value which is used in the &quot;command name&quot; argument of <code>$awaitReactions[]</code>.</td><td>String</td><td>Required</td></tr>
+</tbody></table>
+</div>
 <h2 id="usedemoji"><a class="header" href="#usedemoji">$usedEmoji</a></h2>
 <p>This function is used to return the emoji which was triggered in the <code>$reaction[]</code> command.</p>
 <h3 id="syntax-2"><a class="header" href="#syntax-2">Syntax</a></h3>

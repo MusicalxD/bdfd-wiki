@@ -3160,38 +3160,38 @@ $c[❗️This example requires BDScript 2 enabled❗️]
 </blockquote>
 <p><strong>Output:</strong></p>
 <p><img src="https://user-images.githubusercontent.com/69215413/128615389-30e9dadc-2cce-4868-af33-540f612fcf27.png" alt="example" /></p>
-<div style="break-before: page; page-break-before: always;"></div><h2 id="argument-flags"><a class="header" href="#argument-flags">Argument Flags</a></h2>
-<p>Function argument flags mark how arguments within a function may be used (or hence, not used at all), it will be displayed near or below the function argument.
-Example: (- <code>userID</code> <code>(Flag: Required)</code>) etc.</p>
-<ul>
-<li><strong>Optional</strong> - The argument <strong>can</strong> be excluded but <strong>cannot</strong> be left empty, they show up as <code>(something)</code> and will <strong>always</strong> be after all required arguments.</li>
-<li><strong>Required</strong> - The argument <strong>must</strong> be included and <strong>cannot</strong> be empty.</li>
-<li><strong>Emptiable</strong> - The argument <strong>must</strong> be included but <strong>can</strong> be empty.</li>
-<li><strong>Vacantable</strong> - The argument <strong>can</strong> be excluded and if included <strong>can</strong> be empty.</li>
-</ul>
-<h2 id="argument-types"><a class="header" href="#argument-types">Argument Types</a></h2>
-<p>This section will explain the various argument types used for function arguments. Function arguments are anything that goes in the brackets <code>[]</code> of a function, it will be displayed near or below the function argument.
-Example: (- <code>userID</code> <code>(Type: Snowflake || Flag: Required)</code>) and if it has more than one option it will be <code>(Type: String, Snowflake || Flag: Required)</code> etc.</p>
-<ul>
-<li><strong>String</strong> - This is the most generalized function, a string can be any character or text.</li>
-<li><strong>Snowflake</strong> - A valid discord ID, can be of a role, channel, user, server, emoji and message.</li>
-<li><strong>Integer</strong> - Any number without decimal (-5, -1, 1, 5 10, etc).</li>
-<li><strong>Float</strong> - A number with decimal (-2.5, -0.5, 1.5, 5.2, 7.30, etc).</li>
-<li><strong>URL</strong> - A valid domain link, <strong>must</strong> be prefixed by <code>http://</code> or <code>https://</code> and have a valid domain name.</li>
-<li><strong>HowMany</strong> - A number that is prefixed or suffixed with &lt; or &gt;, or just a plain integer.</li>
-<li><strong>Enum</strong> - Strings that match a certain key value (case insensitive).</li>
-<li><strong>Emoji</strong> - Emoji as 🌹 or the discord custom emojis in form of <code>&lt;a:emoji_name:emoji-id&gt;</code> for gif emojis and <code>&lt;:emoji_name:emoji-id&gt;</code> for non-gif emojis, for how to get that, check <a href="guides/other/../../bdscript/addReactions.html">$addReactions</a> as it has explanations for that. Characters <code>&lt;&gt;</code> can be omitted from the discord custom emoji form.</li>
-<li><strong>Duration</strong> - A time based duration, an integer suffixed with a valid time format (s, m, h, d, w).</li>
-<li><strong>Permission</strong> - Discord permission (case insensitive), see <a href="guides/other/../../resources/permissions.html">this</a> for all valid permissions.</li>
-<li><strong>Bool</strong> - yes/no or true/false.</li>
-<li><strong>Color</strong> - Color Hex Code you can get from <a href="https://htmlcolorcodes.com/color-picker">here</a> as an example</li>
-</ul>
-<h2 id="pairs"><a class="header" href="#pairs">Pairs</a></h2>
-<ul>
-<li><strong>Tuple</strong> - A tuple is a set of arguments that depend on others to function, they are shown with <code>&lt;&gt;</code> on either side.</li>
-<li><strong>Ellipsis</strong> - Ellipsis notations (<code>...</code>) symbolize an argument that can be repeated multiple times. Ellipsis is denoted with <code>...</code> as the argument after the argument which can be repeated.</li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="character-escaping"><a class="header" href="#character-escaping">Character Escaping</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="argument-flags"><a class="header" href="#argument-flags">Argument Flags</a></h1>
+<p>Function argument flags indicate how arguments within a function may be used, or if they are optional or required.</p>
+<div class="table-wrapper"><table><thead><tr><th>Flags</th><th>Description</th></tr></thead><tbody>
+<tr><td>Optional</td><td>The argument can be excluded, but cannot be left empty. It is displayed as <code>(something)</code> in usage.</td></tr>
+<tr><td>Required</td><td>The argument must be included and cannot be empty.</td></tr>
+<tr><td>Emptiable</td><td>The argument must be included, but can be empty.</td></tr>
+<tr><td>Vacantable</td><td>The argument can be excluded, and if included, it can be empty.</td></tr>
+</tbody></table>
+</div>
+<h1 id="argument-types"><a class="header" href="#argument-types">Argument Types</a></h1>
+<p>This section explains the various argument types used for function arguments. Arguments are values placed within <code>[]</code> in a function, and they are displayed near or below the function.</p>
+<div class="table-wrapper"><table><thead><tr><th>Types</th><th>Description</th></tr></thead><tbody>
+<tr><td>String</td><td>A general-purpose argument that can contain any characters or text.</td></tr>
+<tr><td>Snowflake</td><td>A valid Discord ID, such as a role, channel, user, server, emoji, or message.</td></tr>
+<tr><td>Integer</td><td>A whole number without a decimal point (e.g., -5, -1, 1, 5, 10, etc.).</td></tr>
+<tr><td>Float</td><td>A number with a decimal point (e.g., -2.5, -0.5, 1.5, 5.2, 7.30, etc.).</td></tr>
+<tr><td>URL</td><td>A valid URL with the prefix <code>http://</code> or <code>https://</code> and a valid domain name.</td></tr>
+<tr><td>HowMany</td><td>A number that can be prefixed or suffixed with <code>&lt;</code> or <code>&gt;</code>, or a plain integer.</td></tr>
+<tr><td>Enum</td><td>Strings that match specific key values (case insensitive).</td></tr>
+<tr><td>Emoji</td><td>An emoji represented as 🌹 or in the format <code>&lt;a:emoji_name:emoji-id&gt;</code> for gif emojis and <code>&lt;:emoji_name:emoji-id&gt;</code> for non-gif emojis.</td></tr>
+<tr><td>Duration</td><td>A time-based duration, represented by an integer followed by a valid time format (s, m, h, d, w).</td></tr>
+<tr><td>Permission</td><td>A Discord permission (case insensitive). See <a href="guides/other/../../resources/permissions.html">here</a> for valid permissions.</td></tr>
+<tr><td>Bool</td><td>A boolean value represented as yes/no or true/false.</td></tr>
+<tr><td>Color</td><td>A color hex code, which can be obtained from <a href="https://htmlcolorcodes.com/color-picker">here</a>, for example.</td></tr>
+</tbody></table>
+</div>
+<h1 id="argument-pairs"><a class="header" href="#argument-pairs">Argument Pairs</a></h1>
+<div class="table-wrapper"><table><thead><tr><th>Pairs</th><th>Description</th></tr></thead><tbody>
+<tr><td>Tuple</td><td>A set of arguments that depend on each other to function, displayed with <code>&lt;&gt;</code> on either side.</td></tr>
+<tr><td>Ellipsis</td><td>Ellipsis notation (<code>...</code>) represents an argument that can be repeated multiple times.</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="character-escaping"><a class="header" href="#character-escaping">Character Escaping</a></h1>
 <p><em>(for advanced users)</em></p>
 <p><strong>What are Escape Characters?</strong></p>
 <p>Escape characters are used to indicate that the character should not be interpreted as a modification of the code, rather just text that appears in the code or bot's response. Basically, escape characters let your bot return the function-triggering characters (e.g <code>;</code>, <code>$</code>, <code>[</code>, <code>]</code>) without any changes to the code.</p>
@@ -4421,54 +4421,35 @@ For example, <code>$nomention</code> or <code>$ping</code>. It is also worth rem
 <div style="break-before: page; page-break-before: always;"></div><h1 id="addbutton-1"><a class="header" href="#addbutton-1">$addButton</a></h1>
 <p>Adds button to the response.</p>
 <h2 id="syntax-34"><a class="header" href="#syntax-34">Syntax</a></h2>
-<pre><code>$addButton[new row?;interaction ID/url;label;style;(disable?;emoji;message ID)]
+<pre><code>$addButton[new row;interaction ID/url;label;style;(disable?;emoji;message ID)]
 </code></pre>
 <h3 id="parameters-28"><a class="header" href="#parameters-28">Parameters</a></h3>
-<ul>
-<li>
-<p><code>new row?</code> <code>(Type: Bool || Flag: Required)</code>: If set to <code>yes</code> the button will appear in a new row. If it's set to <code>no</code> the button will appear in the same row as a previous button.</p>
-<blockquote>
-<p>A message can have a maximum of 25 buttons (5 rows of 5 buttons).</p>
-</blockquote>
-</li>
-<li>
-<p><code>interaction ID/url</code> <code>(Type: String, URL || Flag: Required)</code>: Depending on the button type, you either set it to <code>interaction ID</code> which is then used in <code>$onInteraction[ID]</code> callback or <code>URL</code> if it's a link button.</p>
-</li>
-<li>
-<p><code>label</code> <code>(Type: String || Flag: Emptiable)</code>: The text value visible on the button.</p>
-</li>
-<li>
-<p><code>style</code> <code>(Type: Enum || Flag: Required)</code>: It's used to specify the button's background color. If the button has a link/url you <strong>have to</strong> set the value to <code>link</code>. Check <a href="bdscript/addButton.html#button-style">this section</a> for more details.</p>
-</li>
-<li>
-<p><code>disable?</code> <code>(Type: Bool || Flag: Vacantable)</code>: If set to <code>yes</code> the button can't be pressed. Defaults as <code>no</code>.</p>
-</li>
-<li>
-<p><code>emoji</code> <code>(Type: Emoji || Flag: Vacantable)</code>: Adds an emoji inside the button. Emojis have to be either pasted as <em>unicode</em> or be in the following format <code>&lt;:emoji name:emoji ID&gt;</code>.</p>
-</li>
-<li>
-<p><code>message ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: Adds a button to the provided message ID. It's important to note that provided message ID author <strong>has to</strong> be the bot.</p>
-</li>
-</ul>
-<blockquote>
-<p>Interactive buttons can't have duplicated <code>ID</code>'s in the same message. So for example, you can't have two buttons with the ID set to <code>test</code>.</p>
-</blockquote>
-<blockquote>
-<p>If <code>url</code> is used in <code>interaction ID/url</code> argument, it <strong>has to</strong> start with <code>http://</code> or <code>https://</code></p>
-</blockquote>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>new row</td><td>If set to <code>yes</code>, the button will appear in a new row. If set to <code>no</code>, the button will appear in the same row as a previous button.</td><td>Bool</td><td>Required</td></tr>
+<tr><td>interaction ID/url</td><td>Depending on the button type, set it to the interaction ID to be used in the <code>$onInteraction[ID]</code> callback, or set it to a URL if it's a link button.</td><td>String, URL</td><td>Required</td></tr>
+<tr><td>label</td><td>The text value visible on the button.</td><td>String</td><td>Emptiable</td></tr>
+<tr><td>style</td><td>Used to specify the button's background color. If the button has a link/URL, it must be set to <code>link</code>. Refer to the <a href="bdscript/addButton.html#button-style">button style section</a> for more details.</td><td>Enum</td><td>Required</td></tr>
+<tr><td>disable?</td><td>If set to <code>yes</code>, the button cannot be pressed. Defaults to <code>no</code>.</td><td>Bool</td><td>Vacantable</td></tr>
+<tr><td>emoji</td><td>Adds an emoji inside the button. Emojis can be pasted as <em>unicode</em> or in the format <code>&lt;:emoji name:emoji ID&gt;</code>.</td><td>Emoji</td><td>Vacantable</td></tr>
+<tr><td>message ID</td><td>Adds a button to the provided message ID. Note that the author of the provided message ID must be the bot.</td><td>Snowflake</td><td>Vacantable</td></tr>
+</tbody></table>
+</div>
+<h3 id="note-"><a class="header" href="#note-">Note :</a></h3>
+<p>1- A message can have a maximum of 25 buttons (5 rows of 5 buttons).</p>
+<p>2- Interactive buttons can't have duplicated <code>ID</code>'s in the same message. So for example, you can't have two buttons with the ID set to <code>test</code>.</p>
+<p>3- If <code>url</code> is used in <code>interaction ID/url</code> argument, it <strong>has to</strong> start with <code>http://</code> or <code>https://</code></p>
 <h2 id="button-style-1"><a class="header" href="#button-style-1">Button Style</a></h2>
 <p>Buttons can have different styles <em>(background colors)</em>.
 Here, are all possible values for <code>style</code> function argument.</p>
-<ul>
-<li><code>primary</code>: Blue button</li>
-<li><code>secondary</code>: Gray button</li>
-<li><code>success</code>: Green button</li>
-<li><code>danger</code>: Red button</li>
-<li><code>link</code>: Redirect button</li>
-</ul>
-<blockquote>
-<p>If <code>link</code> style is used, the button <strong>won't send</strong> any interactions!</p>
-</blockquote>
+<div class="table-wrapper"><table><thead><tr><th>Style</th><th>Color</th></tr></thead><tbody>
+<tr><td>primary</td><td>Blue</td></tr>
+<tr><td>secondary</td><td>Gray</td></tr>
+<tr><td>success</td><td>Green</td></tr>
+<tr><td>danger</td><td>Red</td></tr>
+<tr><td>link</td><td>Redirect</td></tr>
+</tbody></table>
+</div>
+<h3 id="note---if-link-style-is-used-the-button-wont-send-any-interactions"><a class="header" href="#note---if-link-style-is-used-the-button-wont-send-any-interactions">Note :  If <code>link</code> style is used, the button <strong>won't send</strong> any interactions!</a></h3>
 <h2 id="example-45"><a class="header" href="#example-45">Example</a></h2>
 <pre><code>$nomention
 Hi
@@ -4484,9 +4465,11 @@ $addButton[no;test;Say hello!;primary;no;]
 <pre><code>$addCmdReactions[emojis;...]
 </code></pre>
 <h3 id="parameters-29"><a class="header" href="#parameters-29">Parameters</a></h3>
-<ul>
-<li><code>emojis</code> <code>(Type: Emoji || Flag: Required)</code>: The emoji(s) the bot reacts with. Separate emojis using <code>;</code>.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>emojis</td><td>The emoji(s) the bot reacts with. Separate emojis using <code>;</code>.</td><td>Emoji</td><td>Required</td></tr>
+</tbody></table>
+</div>
+<h3 id="note--1"><a class="header" href="#note--1">Note :</a></h3>
 <blockquote>
 <p>You can use Unicode emojis and emoji IDs, but not emoji names. For <strong>emoji IDs</strong>, the bot must be present in the server that the emoji originates from. </p>
 <p>List of unicode emojis: <a href="https://getemoji.com">😋 Get Emoji</a></p>
@@ -4516,11 +4499,12 @@ $addCmdReactions[$message]
 <pre><code>$addEmoji[name;image URL;return emoji?]
 </code></pre>
 <h3 id="parameters-30"><a class="header" href="#parameters-30">Parameters</a></h3>
-<ul>
-<li><code>name</code> <code>(Type: String || Flag: Required)</code>: The name of the new emoji.</li>
-<li><code>image URL</code> <code>(Type: URL || Flag: Required)</code>: The image of the new emoji. The link needs to be a valid image URL.</li>
-<li><code>return emoji?</code> <code>(Type: Bool || Flag: Required)</code>: Whether to show the emoji in the bot's message or not. (<code>yes</code>/<code>no</code>)</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>name</td><td>The name of the new emoji.</td><td>String</td><td>Required</td></tr>
+<tr><td>image URL</td><td>The image of the new emoji.</td><td>URL</td><td>Required</td></tr>
+<tr><td>return emoji?</td><td>Whether to show the emoji in the bot's message or not. (<code>yes</code>/<code>no</code>)</td><td>Bool</td><td>Required</td></tr>
+</tbody></table>
+</div>
 <h2 id="example-47"><a class="header" href="#example-47">Example</a></h2>
 <pre><code>$nomention
 $argsCheck[&gt;2;Provide all needed arguments! Usage: `!add-emoji (imageURL) (emojiName)`]
@@ -4532,19 +4516,17 @@ Added new emoji: $addEmoji[$replaceText[$message;$message[1];;1];$message[1];yes
 <h2 id="syntax-37"><a class="header" href="#syntax-37">Syntax</a></h2>
 <pre><code>$addField[name;value;(inline?;index)]
 </code></pre>
-<blockquote>
-<p>You can create up to 25 fields per embed.</p>
-</blockquote>
 <h3 id="parameters-31"><a class="header" href="#parameters-31">Parameters</a></h3>
-<ul>
-<li><code>name</code> <code>(Type: String || Flag: Required)</code>: The name of the field. It cannot exceed more than 256 characters.</li>
-<li><code>value</code> <code>(Type: String || Flag: Required)</code>: The value of the field. It cannot exceed more than 1024 characters.</li>
-<li><code>inline?</code> <code>(Type: Bool || Flag: Optional)</code>: If <code>yes</code>, fields will appear in the same line. However, if you have more than 3 fields (or the fields are just too long) with inline enabled, the bot will return rows with 3 fields (2 if there is a thumbnail) in each row. It is set to <code>no</code> by default.</li>
-<li><code>index</code> <code>(Type: Integer || Flag: Optional)</code>: Adds field to specified embed index number. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
-</ul>
-<blockquote>
-<p>Inline fields may not appear inline on some mobile devices.</p>
-</blockquote>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>name</td><td>The name of the field. It cannot exceed more than 256 characters.</td><td>String</td><td>Required</td></tr>
+<tr><td>value</td><td>The value of the field. It cannot exceed more than 1024 characters.</td><td>String</td><td>Required</td></tr>
+<tr><td>inline?</td><td>If <code>yes</code>, fields will appear in the same line. However, if you have more than 3 fields (or the fields are just too long) with inline enabled, the bot will return rows with 3 fields (2 if there is a thumbnail) in each row. It is set to <code>no</code> by default.</td><td>Bool</td><td>Optional</td></tr>
+<tr><td>index</td><td>Adds the field to the specified embed index number. <a href="bdscript/../resources/embedIndexes.html">Learn more</a>.</td><td>Integer</td><td>Optional</td></tr>
+</tbody></table>
+</div>
+<h3 id="note--2"><a class="header" href="#note--2">Note :</a></h3>
+<p>1- You can create up to 25 fields per embed.</p>
+<p>2- Inline fields may not appear inline on some mobile devices.</p>
 <h2 id="examples-8"><a class="header" href="#examples-8">Examples</a></h2>
 <h3 id="without-inline-fields"><a class="header" href="#without-inline-fields">Without inline fields</a></h3>
 <pre><code>$nomention
@@ -4566,9 +4548,11 @@ $addField[This is the field name! #3;This is the field value! #3;yes]
 <pre><code>$addReactions[emojis;...]
 </code></pre>
 <h3 id="parameters-32"><a class="header" href="#parameters-32">Parameters</a></h3>
-<ul>
-<li><code>emojis</code> <code>(Type: Emoji || Flag: Required)</code>: The emoji(s) the bot reacts with. Separate emojis using <code>;</code>.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>emojis</td><td>The emoji(s) the bot reacts with. Separate emojis using <code>;</code>.</td><td>Emoji</td><td>Required</td></tr>
+</tbody></table>
+</div>
+<h3 id="note"><a class="header" href="#note">Note</a></h3>
 <blockquote>
 <p>You can use Unicode emojis and emoji IDs, but not emoji names. For <strong>emoji IDs</strong>, the bot must be present in the server that the emoji originates from. </p>
 <p>List of unicode emojis: <a href="https://getemoji.com">😋 Get Emoji</a></p>
@@ -4599,15 +4583,16 @@ $addReactions[✅;❌]
 <pre><code>$addSelectMenuOption[menu option ID;label;value;description;(default?;emoji;message ID)]
 </code></pre>
 <h3 id="parameters-33"><a class="header" href="#parameters-33">Parameters</a></h3>
-<ul>
-<li><code>menu option ID</code> <code>(Type: String || Flag: Required)</code>: The ID used in <code>$newSelectMenu[]</code>.</li>
-<li><code>label</code> <code>(Type: String || Flag: Required)</code>: The name of the option.</li>
-<li><code>value</code> <code>(Type: String || Flag: Required)</code>: It's the data that gets passed to <code>$onInteraction[]</code> callback. <strong>The value has to be unique in the select menu!</strong></li>
-<li><code>description</code> <code>(Type: String || Flag: Emptiable)</code>: A text which shows up under the <code>label</code>.</li>
-<li><code>default?</code> <code>(Type: Bool || Flag: Vacantable)</code>: Should the option be selected by default. (yes/no) <strong>There can be only one default option!</strong></li>
-<li><code>emoji</code> <code>(Type: Emoji || Flag: Vacantable)</code>: It shows up next to the <code>label</code>.</li>
-<li><code>message ID</code> <code>(Type: String || Flag: Vacantable)</code>: ID of a message that should have select menu added to it. By default it's the bot's response.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>menu option ID</td><td>The ID used in <code>$newSelectMenu[]</code>.</td><td>String</td><td>Required</td></tr>
+<tr><td>label</td><td>The name of the option.</td><td>String</td><td>Required</td></tr>
+<tr><td>value</td><td>It's the data that gets passed to <code>$onInteraction[]</code> callback.</td><td>String</td><td>Required</td></tr>
+<tr><td>description</td><td>A text which shows up under the <code>label</code>.</td><td>String</td><td>Emptiable</td></tr>
+<tr><td>default?</td><td>Should the option be selected by default. (yes/no) <strong>There can be only one default option!</strong></td><td>Bool</td><td>Vacantable</td></tr>
+<tr><td>emoji</td><td>It shows up next to the <code>label</code>.</td><td>Emoji</td><td>Vacantable</td></tr>
+<tr><td>message ID</td><td>ID of a message that should have select menu added to it. By default it's the bot's response.</td><td>String</td><td>Vacantable</td></tr>
+</tbody></table>
+</div>
 <h2 id="example-49"><a class="header" href="#example-49">Example</a></h2>
 <pre><code>$nomention
 $newSelectMenu[Example;1;1;Choose some option]
@@ -4629,16 +4614,17 @@ $addSelectMenuOption[Example;Third;third-option;The third option]
 <p>You can't add more than 5 text input fields.</p>
 </blockquote>
 <h3 id="parameters-34"><a class="header" href="#parameters-34">Parameters</a></h3>
-<ul>
-<li><code>text input ID</code> <code>(Type: String || Flag: Required)</code>: ID that is used to retrieve the text input in the field. This value must be unique.</li>
-<li><code>style</code> <code>(Type: Enum || Flag: Required)</code>: The text input field style, either <code>short</code> or <code>paragraph</code>.</li>
-<li><code>label</code> <code>(Type: String || Flag: Required)</code>: Name of the text input field. This value must be less than or equal to 45 characters.</li>
-<li><code>minimum length</code> <code>(Type: Integer || Flag: Vacantable)</code>: Minimum number of characters a user needs to input. This value must be an integer between 0 and 4000, and can't be greater than the <code>maximum length</code>.</li>
-<li><code>maximum length</code> <code>(Type: Integer || Flag: Vacantable)</code>: Maximum number of characters a user can input. This value must be an integer between 0 and 4000, and can't be less than the <code>minimum length</code>.</li>
-<li><code>required?</code> <code>(Type: Bool || Flag: Optional)</code>: Whether a user must fill in the text input field, defaults to true. (<code>yes</code>/<code>no</code>)</li>
-<li><code>value</code> <code>(Type: String || Flag: Vacantable)</code>: The text that is written by default in the text input field. This value must be less than or equal to 4000 characters and must not be less than <code>minimum length</code> and no more than <code>maximum length</code>.</li>
-<li><code>placeholder</code> <code>(Type: String || Flag: Vacantable)</code>: The text that is displayed if the text input field is empty. This value must be less than or equal to 100 characters.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>text input ID</td><td>ID that is used to retrieve the text input in the field. This value must be unique.</td><td>String</td><td>Required</td></tr>
+<tr><td>style</td><td>The text input field style, either <code>short</code> or <code>paragraph</code>.</td><td>Enum</td><td>Required</td></tr>
+<tr><td>label</td><td>Name of the text input field. This value must be less than or equal to 45 characters.</td><td>String</td><td>Required</td></tr>
+<tr><td>minimum length</td><td>Minimum number of characters a user needs to input. This value must be an integer between 0 and 4000, and can't be greater than the <code>maximum length</code>.</td><td>Integer</td><td>Vacantable</td></tr>
+<tr><td>maximum length</td><td>Maximum number of characters a user can input. This value must be an integer between 0 and 4000, and can't be less than the <code>minimum length</code>.</td><td>Integer</td><td>Vacantable</td></tr>
+<tr><td>required?</td><td>Whether a user must fill in the text input field, defaults to true. (<code>yes</code>/<code>no</code>)</td><td>Bool</td><td>Optional</td></tr>
+<tr><td>value</td><td>The text that is written by default in the text input field. This value must be less than or equal to 4000 characters and must not be less than <code>minimum length</code> and no more than <code>maximum length</code>.</td><td>String</td><td>Vacantable</td></tr>
+<tr><td>placeholder</td><td>The text that is displayed if the text input field is empty. This value must be less than or equal to 100 characters.</td><td>String</td><td>Vacantable</td></tr>
+</tbody></table>
+</div>
 <h3 id="styles-1"><a class="header" href="#styles-1">Styles</a></h3>
 <ul>
 <li><code>short</code> and <code>paragraph</code>.</li>
@@ -4673,9 +4659,10 @@ $addTimestamp
 <pre><code>$addTimestamp[index]
 </code></pre>
 <h3 id="parameters-35"><a class="header" href="#parameters-35">Parameters</a></h3>
-<ul>
-<li><code>index</code> <code>(Type: Integer || Flag: Optional)</code>: To which embed the timestamp should be added to. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>index</td><td>To which embed the timestamp should be added to. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></td><td>Integer</td><td>Optional</td></tr>
+</tbody></table>
+</div>
 <h2 id="example-52"><a class="header" href="#example-52">Example</a></h2>
 <pre><code>$nomention
 $description[Hi!]
@@ -4714,9 +4701,10 @@ $message
 <pre><code>$allowRoleMentions[role IDs;...]
 </code></pre>
 <h3 id="parameters-36"><a class="header" href="#parameters-36">Parameters</a></h3>
-<ul>
-<li><code>role IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The roles that can be pinged, leave empty to disable pings for every role. Separate role IDs using <code>;</code>.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>role IDs</td><td>The roles that can be pinged, leave empty to disable pings for every role. Separate role IDs using <code>;</code>.</td><td>Snowflake</td><td>Emptiable</td></tr>
+</tbody></table>
+</div>
 <h2 id="example-55"><a class="header" href="#example-55">Example</a></h2>
 <pre><code>$nomention
 $allowRoleMentions[]
@@ -4729,9 +4717,10 @@ I'm pinging &lt;@&amp;858376972303204362&gt;, but no one got notified; wow!
 <pre><code>$allowUserMentions[user IDs;...]
 </code></pre>
 <h3 id="parameters-37"><a class="header" href="#parameters-37">Parameters</a></h3>
-<ul>
-<li><code>user IDs</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The users that can be pinged, leave empty to disable pings for every user. Separate user IDs using <code>;</code>.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>user IDs</td><td>The users that can be pinged, leave empty to disable pings for every user. Separate user IDs using <code>;</code>.</td><td>Snowflake</td><td>Emptiable</td></tr>
+</tbody></table>
+</div>
 <h2 id="example-56"><a class="header" href="#example-56">Example</a></h2>
 <pre><code>$nomention
 $allowUserMentions[]
@@ -4773,9 +4762,10 @@ $description[&quot;helloworld&quot;]
 <pre><code>$and[conditions;...]
 </code></pre>
 <h3 id="parameters-38"><a class="header" href="#parameters-38">Parameters</a></h3>
-<ul>
-<li><code>conditions</code> <code>(Type: String || Flag: Required)</code>: Checks that will be carried out. All conditions must be true for this function to return <code>true</code>. Separate conditions using <code>;</code>.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>conditions</td><td>Checks that will be carried out. All conditions must be true for this function to return <code>true</code>. Separate conditions using <code>;</code>.</td><td>String</td><td>Required</td></tr>
+</tbody></table>
+</div>
 <h3 id="signs-1"><a class="header" href="#signs-1">Signs</a></h3>
 <p><code>==</code> - Equal</p>
 <p><code>!=</code> - Not Equal</p>
@@ -4800,9 +4790,10 @@ $c[The code in the if statement only executes if the user's username is 'noituri
 <pre><code>$argCount[text]
 </code></pre>
 <h3 id="parameters-39"><a class="header" href="#parameters-39">Parameters</a></h3>
-<ul>
-<li><code>text</code> <code>(Type: String || Flag: Emptiable)</code>: The text to get word count for.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>text</td><td>The text to get word count for.</td><td>String</td><td>Emptiable</td></tr>
+</tbody></table>
+</div>
 <h2 id="example-59"><a class="header" href="#example-59">Example</a></h2>
 <pre><code>$nomention
 Word count: $argCount[$message]
@@ -4814,14 +4805,15 @@ Word count: $argCount[$message]
 <pre><code>$argsCheck[how many?;error message]
 </code></pre>
 <h3 id="parameters-40"><a class="header" href="#parameters-40">Parameters</a></h3>
-<ul>
-<li><code>how many?</code> <code>(Type: HowMany || Flag: Required)</code>: How many arguments there should be in the user’s message.
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>how many?</td><td>How many arguments there should be in the user's message.</td><td>HowMany</td><td>Required</td></tr>
+<tr><td>error message</td><td>The message that the bot will send if the user has too many/little arguments.</td><td>String</td><td>Emptiable</td></tr>
+</tbody></table>
+</div>
+<h3 id="note--3"><a class="header" href="#note--3">Note :</a></h3>
 <blockquote>
 <p>If you want users to have 3 or more arguments in their message; you can use <code>&gt;3</code>. If you want users to have less than 3 arguments in their message, you can use <code>&lt;3</code>. If you want the users to have exactly 3 arguments in their message put <code>3</code>. </p>
 </blockquote>
-</li>
-<li><code>error message</code> <code>(Type: String || Flag: Emptiable)</code>: The message that the bot will send if the user has too many/little arguments.</li>
-</ul>
 <h2 id="example-60"><a class="header" href="#example-60">Example</a></h2>
 <pre><code>$nomention
 $argsCheck[&gt;1;❌ Please provide something for me to say!]
@@ -4843,10 +4835,11 @@ $noMentionMessage
 <pre><code>$author[text;(index)]
 </code></pre>
 <h3 id="parameters-41"><a class="header" href="#parameters-41">Parameters</a></h3>
-<ul>
-<li><code>text</code> <code>(Type: String || Flag: Emptiable)</code>: The text that appears in the author text. It cannot exceed more than 256 characters.</li>
-<li><code>index</code> <code>(Type: Integer || Flag: Optional)</code>: To which embed the author text will be added. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>text</td><td>The text that appears in the author text. It cannot exceed more than 256 characters.</td><td>String</td><td>Emptiable</td></tr>
+<tr><td>index</td><td>To which embed the author text will be added. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></td><td>Integer</td><td>Optional</td></tr>
+</tbody></table>
+</div>
 <h2 id="example-61"><a class="header" href="#example-61">Example</a></h2>
 <pre><code>$nomention
 $author[This is the author text!]
@@ -4871,14 +4864,16 @@ $image[$authorAvatar]
 <h2 id="syntax-53"><a class="header" href="#syntax-53">Syntax</a></h2>
 <pre><code>$authorIcon[image url;(index)]
 </code></pre>
+<h3 id="parameters-42"><a class="header" href="#parameters-42">Parameters</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>image url</td><td>The image for the author icon. This must be a valid image URL.</td><td>URL</td><td>Emptiable</td></tr>
+<tr><td>index</td><td>To which embed the author icon will be added. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></td><td>Integer</td><td>Optional</td></tr>
+</tbody></table>
+</div>
+<h3 id="note--4"><a class="header" href="#note--4">Note :</a></h3>
 <blockquote>
 <p><code>$authorIcon[]</code> will not work if there is no text provided in <code>$author[]</code>.</p>
 </blockquote>
-<h3 id="parameters-42"><a class="header" href="#parameters-42">Parameters</a></h3>
-<ul>
-<li><code>image url</code> <code>(Type: URL || Flag: Emptiable)</code>: The image for the author icon. This must be a valid image URL.</li>
-<li><code>index</code> <code>(Type: Integer || Flag: Optional)</code>: To which embed the author icon will be added. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
-</ul>
 <h2 id="example-63"><a class="header" href="#example-63">Example</a></h2>
 <pre><code>$nomention
 $authorIcon[$authorAvatar]
@@ -4901,10 +4896,11 @@ This command was written by &lt;@$authorID&gt;!
 <pre><code>$authorOfMessage[channel ID;message ID]
 </code></pre>
 <h3 id="parameters-43"><a class="header" href="#parameters-43">Parameters</a></h3>
-<ul>
-<li><code>channel ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel where the message was sent in.</li>
-<li><code>message ID</code> <code>(Type: Snowflake || Flag: Required)</code>: The message for which the author ID will be returned.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>channel ID</td><td>The channel where the message was sent in.</td><td>Snowflake</td><td>Required</td></tr>
+<tr><td>message ID</td><td>The message for which the author ID will be returned.</td><td>Snowflake</td><td>Required</td></tr>
+</tbody></table>
+</div>
 <blockquote>
 <p><a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">How to get the message/channel ID guide.</a></p>
 </blockquote>
@@ -4918,14 +4914,16 @@ Author of message: $username[$authorOfMessage[$message[1];$message[2]]]
 <h2 id="syntax-56"><a class="header" href="#syntax-56">Syntax</a></h2>
 <pre><code>$authorURL[url;(index)]
 </code></pre>
+<h3 id="parameters-44"><a class="header" href="#parameters-44">Parameters</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>url</td><td>The link to set as the author hyperlink.</td><td>URL</td><td>Emptiable</td></tr>
+<tr><td>index</td><td>To which embed the author URL will be added.</td><td>Integer</td><td>Optional</td></tr>
+</tbody></table>
+</div>
+<h3 id="note--5"><a class="header" href="#note--5">Note :</a></h3>
 <blockquote>
 <p><code>$authorURL[]</code> will not work if there is no text provided in <code>$author[]</code>.</p>
 </blockquote>
-<h3 id="parameters-44"><a class="header" href="#parameters-44">Parameters</a></h3>
-<ul>
-<li><code>url</code> <code>(Type: URL || Flag: Emptiable)</code>: The link to set as the author hyperlink.</li>
-<li><code>index</code> <code>(Type: Integer || Flag: Optional)</code>: To which embed the author URL will be added. <a href="bdscript/../resources/embedIndexes.html">(learn more)</a></li>
-</ul>
 <h2 id="example-66"><a class="header" href="#example-66">Example</a></h2>
 <pre><code>$nomention
 $author[Click me to visit the BDFD website!]
@@ -4938,11 +4936,12 @@ $authorURL[https://botdesignerdiscord.com]
 <pre><code>$awaitFunc[name;(user ID;channel ID)]
 </code></pre>
 <h3 id="parameters-45"><a class="header" href="#parameters-45">Parameters</a></h3>
-<ul>
-<li><code>name</code> <code>(Type: String || Flag: Required)</code>: The name used inside <a href="bdscript/../callbacks/awaitedCommand.html"><code>$awaitedCommand[]</code></a> and <a href="bdscript/../callbacks/awaitedCommandError.html"><code>$awaitedCommandError[]</code></a> callbacks.</li>
-<li><code>user ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: The user the awaited command will trigger for. Uses command author, if <code>user ID</code> is not given.</li>
-<li><code>channel ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The channel where the command will be awaited. Uses current channel, if <code>channel ID</code> is not given.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>name</td><td>The name used inside <code>$awaitedCommand[]</code> and <code>$awaitedCommandError[]</code> callbacks.</td><td>String</td><td>Required</td></tr>
+<tr><td>user ID</td><td>The user the awaited command will trigger for. Uses command author if <code>user ID</code> is not given.</td><td>Snowflake</td><td>Vacantable</td></tr>
+<tr><td>channel ID</td><td>The channel where the command will be awaited. Uses current channel if <code>channel ID</code> is not given.</td><td>Snowflake</td><td>Optional</td></tr>
+</tbody></table>
+</div>
 <h2 id="example-67"><a class="header" href="#example-67">Example</a></h2>
 <pre><code>$nomention
 What do you want me to say?
@@ -6297,7 +6296,7 @@ Answer: $divide[$message[1];$message[2]]
 <ul>
 <li><code>userID</code> <code>(Type: Snowflake || Flag: Emptiable)</code>: The user to whom to send the direct message. </li>
 </ul>
-<h2 id="note"><a class="header" href="#note">Note</a></h2>
+<h2 id="note-1"><a class="header" href="#note-1">Note</a></h2>
 <p>If the command fails to send the message, make sure the user allows dm messages from everyone.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="dmchannelid"><a class="header" href="#dmchannelid">$dmChannelID</a></h1>
 <p>Retrieves the DM channel ID for the provided user id.</p>
@@ -7767,7 +7766,7 @@ $max[100;20;50]
 This server has $membersCount members 
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/70468667/219971581-9eca0e8e-0b85-4ee3-b5e1-42b4fae2178a.jpg" alt="example" /></p>
-<h2 id="note-1"><a class="header" href="#note-1">Note</a></h2>
+<h2 id="note-2"><a class="header" href="#note-2">Note</a></h2>
 <p>You can use <code>$membersCount</code> in bot status to display how many users in all servers of the bot</p>
 <p><img src="https://user-images.githubusercontent.com/70468667/219971617-d3cd270f-792a-415b-b9de-2651fc9d7f08.jpg" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="memberscount-1"><a class="header" href="#memberscount-1">$membersCount[]</a></h1>
@@ -7789,7 +7788,7 @@ you amount of online members.</p>
 there are $membersCount[online] users in this server
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/70468667/219971665-9185a0b7-52e8-44eb-8d43-e5e2455bcbe3.jpg" alt="example" /></p>
-<h3 id="note-2"><a class="header" href="#note-2">Note</a></h3>
+<h3 id="note-3"><a class="header" href="#note-3">Note</a></h3>
 <p>This function requires the Presence Intent</p>
 <p><img src="https://user-images.githubusercontent.com/70468667/219971688-d8fc9a3c-a153-4073-bbef-49c8fd0a87bb.jpg" alt="example" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="mentioned"><a class="header" href="#mentioned">$mentioned</a></h1>
@@ -10757,10 +10756,11 @@ Current Year: $year
 <pre><code>$awaitedCommand[Name;(Filter)]
 </code></pre>
 <h3 id="parameters-289"><a class="header" href="#parameters-289">Parameters</a></h3>
-<ul>
-<li><code>Name</code> <code>(Type: String || Flag: Required)</code>: The name used in the <a href="callbacks/../bdscript/awaitFunc.html"><code>$awaitFunc[]</code></a> function.</li>
-<li><code>Filter</code> <code>(Type: String || Flag: Optional)</code>: It is used to limit the user input.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>Name</td><td>The name used in the <a href="callbacks/../bdscript/awaitFunc.html"><code>$awaitFunc[]</code></a> function.</td><td>String</td><td>Required</td></tr>
+<tr><td>Filter</td><td>It is used to limit the user input.</td><td>String</td><td>Optional</td></tr>
+</tbody></table>
+</div>
 <h3 id="supported-filters-1"><a class="header" href="#supported-filters-1">Supported filters</a></h3>
 <ul>
 <li><code>&lt;numeric&gt;</code> - Accepts only number input.</li>
@@ -10801,9 +10801,10 @@ You have provided a number: $message
 <pre><code>$awaitedCommandError[Name]
 </code></pre>
 <h3 id="parameters-290"><a class="header" href="#parameters-290">Parameters</a></h3>
-<ul>
-<li><code>Name</code> <code>(Type: String || Flag: Required)</code>: The name used in the <a href="callbacks/../bdscript/awaitFunc.html"><code>$awaitFunc[]</code></a> function.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>Name</td><td>The name used in the <a href="callbacks/../bdscript/awaitFunc.html"><code>$awaitFunc[]</code></a> function.</td><td>String</td><td>Required</td></tr>
+</tbody></table>
+</div>
 <h2 id="example-355"><a class="header" href="#example-355">Example</a></h2>
 <p><strong>Trigger: <code>$awaitedCommandError[number]</code></strong></p>
 <pre><code>$nomention
@@ -10823,9 +10824,10 @@ Invalid number!
 <pre><code>$onJoined[channelID]
 </code></pre>
 <h3 id="parameters-291"><a class="header" href="#parameters-291">Parameters</a></h3>
-<ul>
-<li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the channel where the message should be sent to.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>channelID</td><td>The ID of the channel where the message should be sent to.</td><td>Snowflake</td><td>Required</td></tr>
+</tbody></table>
+</div>
 <h2 id="example-356"><a class="header" href="#example-356">Example</a></h2>
 <ol>
 <li>
@@ -10915,9 +10917,10 @@ $setServerVar[welcome;$mentionedChannels[1]]
 <pre><code>$onLeave[channelID]
 </code></pre>
 <h3 id="parameters-292"><a class="header" href="#parameters-292">Parameters</a></h3>
-<ul>
-<li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the channel where the message should be sent to.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>channelID</td><td>The ID of the channel where the message should be sent to.</td><td>Snowflake</td><td>Required</td></tr>
+</tbody></table>
+</div>
 <h2 id="example-357"><a class="header" href="#example-357">Example</a></h2>
 <ol>
 <li>
@@ -11004,9 +11007,10 @@ $setServerVar[leave;$mentionedChannels[1]]
 <pre><code>$onBanAdd[channelID]
 </code></pre>
 <h3 id="parameters-293"><a class="header" href="#parameters-293">Parameters</a></h3>
-<ul>
-<li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the channel where the message should be sent to.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>channelID</td><td>The ID of the channel where the message should be sent to.</td><td>Snowflake</td><td>Required</td></tr>
+</tbody></table>
+</div>
 <h2 id="example-358"><a class="header" href="#example-358">Example</a></h2>
 <ol>
 <li>
@@ -11060,9 +11064,10 @@ $setServerVar[logs;$mentionedChannels[1]]
 <pre><code>$onBanRemove[channelID]
 </code></pre>
 <h3 id="parameters-294"><a class="header" href="#parameters-294">Parameters</a></h3>
-<ul>
-<li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The ID of the channel where the message should be sent to.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>channelID</td><td>The ID of the channel where the message should be sent to.</td><td>Snowflake</td><td>Required</td></tr>
+</tbody></table>
+</div>
 <h2 id="example-359"><a class="header" href="#example-359">Example</a></h2>
 <ol>
 <li>
@@ -11116,9 +11121,10 @@ $setServerVar[logs;$mentionedChannels[1]]
 <pre><code>$onMessageDelete[channelID]
 </code></pre>
 <h3 id="parameters-295"><a class="header" href="#parameters-295">Parameters</a></h3>
-<ul>
-<li><code>channelID</code> <code>(Type: Snowflake || Flag: Required)</code>: The channel to which the resulting message will be sent.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>channelID</td><td>The channel to which the resulting message will be sent.</td><td>Snowflake</td><td>Required</td></tr>
+</tbody></table>
+</div>
 <h2 id="example-360"><a class="header" href="#example-360">Example</a></h2>
 <ol>
 <li>
@@ -11199,9 +11205,10 @@ $endif
 <pre><code>$onIneraction[Interaction ID]
 </code></pre>
 <h3 id="parameters-296"><a class="header" href="#parameters-296">Parameters</a></h3>
-<ul>
-<li><code>Interaction ID</code> <code>(Type: String || Flag: Required)</code>: The custom/menu/button/interaction ID used during the creation of buttons, menus, text fields, and other components.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>Interaction ID</td><td>The custom/menu/button/interaction ID used during the creation of buttons, menus, text fields, and other components.</td><td>String</td><td>Required</td></tr>
+</tbody></table>
+</div>
 <h3 id="supports-1"><a class="header" href="#supports-1">Supports</a></h3>
 <ul>
 <li><strong><a href="callbacks/../guides/general/interactions/buttons/aboutButtons.html">Buttons</a></strong></li>
@@ -11313,9 +11320,10 @@ It's useful when creating leveling, auto-moderation, or message counting systems
 <pre><code>$messageContains[Word;...]
 </code></pre>
 <h3 id="parameters-297"><a class="header" href="#parameters-297">Parameters</a></h3>
-<ul>
-<li><code>Word</code> <code>(Type: String || Flag: Required)</code>: The phrases/words the bot checks for. Separate phrases using <code>;</code>.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>Word</td><td>The phrases/words the bot checks for. Separate phrases using <code>;</code>.</td><td>String</td><td>Required</td></tr>
+</tbody></table>
+</div>
 <h2 id="example-363"><a class="header" href="#example-363">Example</a></h2>
 <ol>
 <li>
@@ -11334,9 +11342,10 @@ It's useful when creating leveling, auto-moderation, or message counting systems
 <pre><code>$reaction[Name]
 </code></pre>
 <h3 id="parameters-298"><a class="header" href="#parameters-298">Parameters</a></h3>
-<ul>
-<li><code>Name</code> <code>(Type: String || Flag: Required)</code>: The value used in &quot;command name&quot; argument of <code>$awaitReactions[]</code>.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>Name</td><td>It's the value which is used in the &quot;command name&quot; argument of <code>$awaitReactions[]</code>.</td><td>String</td><td>Required</td></tr>
+</tbody></table>
+</div>
 <h2 id="example-364"><a class="header" href="#example-364">Example</a></h2>
 <h3 id="trigger-reactionclick"><a class="header" href="#trigger-reactionclick">Trigger <code>$reaction[click]</code></a></h3>
 <pre><code>$nomention
@@ -11353,10 +11362,11 @@ $sendMessage[$username clicked on reaction]
 <pre><code>$awaitReactions[&lt;Command name;Reaction&gt;;...]
 </code></pre>
 <h3 id="parameters-299"><a class="header" href="#parameters-299">Parameters</a></h3>
-<ul>
-<li><code>Command name</code> <code>(Type: String || Flag: Required)</code>: The name which will be used inside the <code>$reaction[]</code> callback.</li>
-<li><code>Reaction</code> <code>(Type: Emoji || Flag: Required)</code>: The reaction to await. The reaction must be either a Unicode Emoji or a Discord custom emoji id.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>Command name</td><td>It's the name which will be used inside the <code>$reaction[]</code> callback.</td><td>String</td><td>Required</td></tr>
+<tr><td>Reaction</td><td>It awaits the given emoji. Emoji must be either in Unicode or in Discord emoji ID format.</td><td>Emoji</td><td>Required</td></tr>
+</tbody></table>
+</div>
 <h2 id="example-365"><a class="header" href="#example-365">Example</a></h2>
 <pre><code>$nomention
 Yes or no?
@@ -11374,9 +11384,10 @@ $addReactions[✅;❌]
 <pre><code>$customImage[Custom image tag]
 </code></pre>
 <h3 id="parameters-300"><a class="header" href="#parameters-300">Parameters</a></h3>
-<ul>
-<li><code>Custom image tag</code> <code>(Type: String || Flag: Required)</code>: The image tag you set in the app while uploading the image.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>Custom image tag</td><td>The image tag you set in the app while uploading the image.</td><td>String</td><td>Required</td></tr>
+</tbody></table>
+</div>
 <h2 id="example-366"><a class="header" href="#example-366">Example</a></h2>
 <pre><code>$nomention
 $customImage[NiceImage]
@@ -11420,10 +11431,11 @@ Hello World!
 <pre><code>$sendNotification[Message;(Image URL)]
 </code></pre>
 <h3 id="parameters-301"><a class="header" href="#parameters-301">Parameters</a></h3>
-<ul>
-<li><code>Message</code> <code>(Type: String || Flag: Required)</code>: The text that is displayed in the notification.</li>
-<li><code>Image URL</code> <code>(Type: String || Flag: Optional)</code>: The URL for the image to be attached.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>Message</td><td>The text that is displayed in the notification.</td><td>String</td><td>Required</td></tr>
+<tr><td>Image URL</td><td>The URL for the image to be attached.</td><td>String</td><td>Optional</td></tr>
+</tbody></table>
+</div>
 <h2 id="example-369"><a class="header" href="#example-369">Example</a></h2>
 <pre><code>$sendNotification[Hello, I miss you!;$userAvatar[$botID]]
 </code></pre>
@@ -11443,10 +11455,12 @@ Hello World!
 <pre><code>$awaitReactions[&lt;Command name;Reaction&gt;;...]
 </code></pre>
 <h4 id="parameters-302"><a class="header" href="#parameters-302">Parameters</a></h4>
-<ul>
-<li><code>Command name</code> <code>(Type: String || Flag: Required)</code>: It's the name which will be used inside the <code>$reaction[]</code> callback.</li>
-<li><code>Reaction</code> <code>(Type: Emoji || Flag: Required)</code>: It awaits the given emoji. Emoji must be either in Unicode or in Discord emoji ID format.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>Command name</td><td>It's the name which will be used inside the <code>$reaction[]</code> callback.</td><td>String</td><td>Required</td></tr>
+<tr><td>Reaction</td><td>It awaits the given emoji. Emoji must be either in Unicode or in Discord emoji ID format.</td><td>Emoji</td><td>Required</td></tr>
+</tbody></table>
+</div>
+<h3 id="note--6"><a class="header" href="#note--6">Note :</a></h3>
 <blockquote>
 <p>📝 You can group reactions by specifying more <em>&quot;command names&quot;</em> and <em>&quot;reactions&quot;</em> in <code>$awaitReactions[]</code>.<br />
 <br />
@@ -11458,9 +11472,10 @@ Hello World!
 <pre><code>$reaction[Name]
 </code></pre>
 <h4 id="parameters-303"><a class="header" href="#parameters-303">Parameters</a></h4>
-<ul>
-<li><code>Name</code> <code>(Type: String || Flag: Required)</code>: It's the value which is used in the <em>&quot;command name&quot;</em> argument of <code>$awaitReactions[]</code>.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>Name</td><td>It's the value which is used in the &quot;command name&quot; argument of <code>$awaitReactions[]</code>.</td><td>String</td><td>Required</td></tr>
+</tbody></table>
+</div>
 <h2 id="usedemoji-1"><a class="header" href="#usedemoji-1">$usedEmoji</a></h2>
 <p>This function is used to return the emoji which was triggered in the <code>$reaction[]</code> command.</p>
 <h3 id="syntax-311"><a class="header" href="#syntax-311">Syntax</a></h3>
@@ -11499,9 +11514,10 @@ Hello World!
 <pre><code>$customImage[Custom image tag]
 </code></pre>
 <h4 id="parameters-304"><a class="header" href="#parameters-304">Parameters</a></h4>
-<ul>
-<li><code>Custom image tag</code> <code>(Type: String || Flag: Required)</code>: The tag that you set the custom image to, previously.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>Custom image tag</td><td>The tag that you set the custom image to, previously.</td><td>String</td><td>Required</td></tr>
+</tbody></table>
+</div>
 <h4 id="example-371"><a class="header" href="#example-371">Example</a></h4>
 <pre><code>$nomention
 $customImage[NiceImage]

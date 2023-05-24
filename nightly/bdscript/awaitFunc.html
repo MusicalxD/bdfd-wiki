@@ -170,11 +170,12 @@
 <pre><code>$awaitFunc[name;(user ID;channel ID)]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
-<ul>
-<li><code>name</code> <code>(Type: String || Flag: Required)</code>: The name used inside <a href="../callbacks/awaitedCommand.html"><code>$awaitedCommand[]</code></a> and <a href="../callbacks/awaitedCommandError.html"><code>$awaitedCommandError[]</code></a> callbacks.</li>
-<li><code>user ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: The user the awaited command will trigger for. Uses command author, if <code>user ID</code> is not given.</li>
-<li><code>channel ID</code> <code>(Type: Snowflake || Flag: Optional)</code>: The channel where the command will be awaited. Uses current channel, if <code>channel ID</code> is not given.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>name</td><td>The name used inside <code>$awaitedCommand[]</code> and <code>$awaitedCommandError[]</code> callbacks.</td><td>String</td><td>Required</td></tr>
+<tr><td>user ID</td><td>The user the awaited command will trigger for. Uses command author if <code>user ID</code> is not given.</td><td>Snowflake</td><td>Vacantable</td></tr>
+<tr><td>channel ID</td><td>The channel where the command will be awaited. Uses current channel if <code>channel ID</code> is not given.</td><td>Snowflake</td><td>Optional</td></tr>
+</tbody></table>
+</div>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
 What do you want me to say?

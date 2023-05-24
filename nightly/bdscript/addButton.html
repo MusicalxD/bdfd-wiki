@@ -167,54 +167,35 @@
                         <h1 id="addbutton"><a class="header" href="#addbutton">$addButton</a></h1>
 <p>Adds button to the response.</p>
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
-<pre><code>$addButton[new row?;interaction ID/url;label;style;(disable?;emoji;message ID)]
+<pre><code>$addButton[new row;interaction ID/url;label;style;(disable?;emoji;message ID)]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
-<ul>
-<li>
-<p><code>new row?</code> <code>(Type: Bool || Flag: Required)</code>: If set to <code>yes</code> the button will appear in a new row. If it's set to <code>no</code> the button will appear in the same row as a previous button.</p>
-<blockquote>
-<p>A message can have a maximum of 25 buttons (5 rows of 5 buttons).</p>
-</blockquote>
-</li>
-<li>
-<p><code>interaction ID/url</code> <code>(Type: String, URL || Flag: Required)</code>: Depending on the button type, you either set it to <code>interaction ID</code> which is then used in <code>$onInteraction[ID]</code> callback or <code>URL</code> if it's a link button.</p>
-</li>
-<li>
-<p><code>label</code> <code>(Type: String || Flag: Emptiable)</code>: The text value visible on the button.</p>
-</li>
-<li>
-<p><code>style</code> <code>(Type: Enum || Flag: Required)</code>: It's used to specify the button's background color. If the button has a link/url you <strong>have to</strong> set the value to <code>link</code>. Check <a href="#button-style">this section</a> for more details.</p>
-</li>
-<li>
-<p><code>disable?</code> <code>(Type: Bool || Flag: Vacantable)</code>: If set to <code>yes</code> the button can't be pressed. Defaults as <code>no</code>.</p>
-</li>
-<li>
-<p><code>emoji</code> <code>(Type: Emoji || Flag: Vacantable)</code>: Adds an emoji inside the button. Emojis have to be either pasted as <em>unicode</em> or be in the following format <code>&lt;:emoji name:emoji ID&gt;</code>.</p>
-</li>
-<li>
-<p><code>message ID</code> <code>(Type: Snowflake || Flag: Vacantable)</code>: Adds a button to the provided message ID. It's important to note that provided message ID author <strong>has to</strong> be the bot.</p>
-</li>
-</ul>
-<blockquote>
-<p>Interactive buttons can't have duplicated <code>ID</code>'s in the same message. So for example, you can't have two buttons with the ID set to <code>test</code>.</p>
-</blockquote>
-<blockquote>
-<p>If <code>url</code> is used in <code>interaction ID/url</code> argument, it <strong>has to</strong> start with <code>http://</code> or <code>https://</code></p>
-</blockquote>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>new row</td><td>If set to <code>yes</code>, the button will appear in a new row. If set to <code>no</code>, the button will appear in the same row as a previous button.</td><td>Bool</td><td>Required</td></tr>
+<tr><td>interaction ID/url</td><td>Depending on the button type, set it to the interaction ID to be used in the <code>$onInteraction[ID]</code> callback, or set it to a URL if it's a link button.</td><td>String, URL</td><td>Required</td></tr>
+<tr><td>label</td><td>The text value visible on the button.</td><td>String</td><td>Emptiable</td></tr>
+<tr><td>style</td><td>Used to specify the button's background color. If the button has a link/URL, it must be set to <code>link</code>. Refer to the <a href="#button-style">button style section</a> for more details.</td><td>Enum</td><td>Required</td></tr>
+<tr><td>disable?</td><td>If set to <code>yes</code>, the button cannot be pressed. Defaults to <code>no</code>.</td><td>Bool</td><td>Vacantable</td></tr>
+<tr><td>emoji</td><td>Adds an emoji inside the button. Emojis can be pasted as <em>unicode</em> or in the format <code>&lt;:emoji name:emoji ID&gt;</code>.</td><td>Emoji</td><td>Vacantable</td></tr>
+<tr><td>message ID</td><td>Adds a button to the provided message ID. Note that the author of the provided message ID must be the bot.</td><td>Snowflake</td><td>Vacantable</td></tr>
+</tbody></table>
+</div>
+<h3 id="note-"><a class="header" href="#note-">Note :</a></h3>
+<p>1- A message can have a maximum of 25 buttons (5 rows of 5 buttons).</p>
+<p>2- Interactive buttons can't have duplicated <code>ID</code>'s in the same message. So for example, you can't have two buttons with the ID set to <code>test</code>.</p>
+<p>3- If <code>url</code> is used in <code>interaction ID/url</code> argument, it <strong>has to</strong> start with <code>http://</code> or <code>https://</code></p>
 <h2 id="button-style"><a class="header" href="#button-style">Button Style</a></h2>
 <p>Buttons can have different styles <em>(background colors)</em>.
 Here, are all possible values for <code>style</code> function argument.</p>
-<ul>
-<li><code>primary</code>: Blue button</li>
-<li><code>secondary</code>: Gray button</li>
-<li><code>success</code>: Green button</li>
-<li><code>danger</code>: Red button</li>
-<li><code>link</code>: Redirect button</li>
-</ul>
-<blockquote>
-<p>If <code>link</code> style is used, the button <strong>won't send</strong> any interactions!</p>
-</blockquote>
+<div class="table-wrapper"><table><thead><tr><th>Style</th><th>Color</th></tr></thead><tbody>
+<tr><td>primary</td><td>Blue</td></tr>
+<tr><td>secondary</td><td>Gray</td></tr>
+<tr><td>success</td><td>Green</td></tr>
+<tr><td>danger</td><td>Red</td></tr>
+<tr><td>link</td><td>Redirect</td></tr>
+</tbody></table>
+</div>
+<h3 id="note---if-link-style-is-used-the-button-wont-send-any-interactions"><a class="header" href="#note---if-link-style-is-used-the-button-wont-send-any-interactions">Note :  If <code>link</code> style is used, the button <strong>won't send</strong> any interactions!</a></h3>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
 Hi

@@ -171,10 +171,11 @@
 <pre><code>$sendNotification[Message;(Image URL)]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
-<ul>
-<li><code>Message</code> <code>(Type: String || Flag: Required)</code>: The text that is displayed in the notification.</li>
-<li><code>Image URL</code> <code>(Type: String || Flag: Optional)</code>: The URL for the image to be attached.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>Message</td><td>The text that is displayed in the notification.</td><td>String</td><td>Required</td></tr>
+<tr><td>Image URL</td><td>The URL for the image to be attached.</td><td>String</td><td>Optional</td></tr>
+</tbody></table>
+</div>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$sendNotification[Hello, I miss you!;$userAvatar[$botID]]
 </code></pre>

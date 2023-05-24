@@ -169,14 +169,16 @@
 <h2 id="syntax"><a class="header" href="#syntax">Syntax</a></h2>
 <pre><code>$authorURL[url;(index)]
 </code></pre>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>url</td><td>The link to set as the author hyperlink.</td><td>URL</td><td>Emptiable</td></tr>
+<tr><td>index</td><td>To which embed the author URL will be added.</td><td>Integer</td><td>Optional</td></tr>
+</tbody></table>
+</div>
+<h3 id="note-"><a class="header" href="#note-">Note :</a></h3>
 <blockquote>
 <p><code>$authorURL[]</code> will not work if there is no text provided in <code>$author[]</code>.</p>
 </blockquote>
-<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
-<ul>
-<li><code>url</code> <code>(Type: URL || Flag: Emptiable)</code>: The link to set as the author hyperlink.</li>
-<li><code>index</code> <code>(Type: Integer || Flag: Optional)</code>: To which embed the author URL will be added. <a href="../resources/embedIndexes.html">(learn more)</a></li>
-</ul>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
 $author[Click me to visit the BDFD website!]

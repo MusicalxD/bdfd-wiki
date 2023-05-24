@@ -171,10 +171,11 @@
 <pre><code>$awaitReactions[&lt;Command name;Reaction&gt;;...]
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
-<ul>
-<li><code>Command name</code> <code>(Type: String || Flag: Required)</code>: The name which will be used inside the <code>$reaction[]</code> callback.</li>
-<li><code>Reaction</code> <code>(Type: Emoji || Flag: Required)</code>: The reaction to await. The reaction must be either a Unicode Emoji or a Discord custom emoji id.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Argument</th><th>Description</th><th>Type</th><th>Flag</th></tr></thead><tbody>
+<tr><td>Command name</td><td>It's the name which will be used inside the <code>$reaction[]</code> callback.</td><td>String</td><td>Required</td></tr>
+<tr><td>Reaction</td><td>It awaits the given emoji. Emoji must be either in Unicode or in Discord emoji ID format.</td><td>Emoji</td><td>Required</td></tr>
+</tbody></table>
+</div>
 <h2 id="example"><a class="header" href="#example">Example</a></h2>
 <pre><code>$nomention
 Yes or no?
